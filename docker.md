@@ -85,3 +85,26 @@ EXPOSE <port> [<port>/<protocol>...]
 ```dockerfile
 WORKDIR /path/to/workdir
 ```
+--- 
+# docker-compose
+当container数量变多时，一个个设置开启关闭会非常麻烦，这时可以使用```docker-compose```来定义与生成多个container
+```yaml
+version: "x.x"
+services:
+  container_1:
+    ...
+  container_2:
+    ...
+  ...
+
+```version```
+  ...
+networks:
+  ...
+```
+```version```：```docker-compose```的版本  
+```services```：需要定义的containers  
+```volumes```：各个container之间的共享文件夹。  
+> While it is possible to declare volumes on the fly as part of the service declaration, this section allows you to create named volumes that can be reused across multiple services (without relying on volumes_from)
+
+可以被放置在 services 块内或外，其区别在于：定义在services外（top-level）的数据卷是全局共享的，可以在多个服务之间共享使用。
