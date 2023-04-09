@@ -92,19 +92,54 @@ WORKDIR /path/to/workdir
 version: "x.x"
 services:
   container_1:
+    build: path_to_docker_file
+    ports:
+      - "HOST_PORT:CONTAINER_PORT"
+      - "CONTAINER_PORT"
+    depends_on:
+      container_2:
+        condition: service_healthy
     ...
   container_2:
+    image: image_name
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost"] # 设置检测程序
+      interval: 1m30s # 设置检测间隔
+      timeout: 10s # 设置检测超时时间
+      retries: 3 # 设置重试次数
+      start_period: 40s # 启动后，多少秒开始启动检测程序
+    networks:
+      aliases:
+        alias_name
     ...
   ...
 
-```version```
+volumes:
   ...
 networks:
   ...
 ```
 ```version```：```docker-compose```的版本  
 ```services```：需要定义的containers  
+- ```depends_on```：用于定于依赖关系  
+  1. ```docker-compose up```会按照被依赖容器先依赖容器后的顺序启动
+  2. ```docker-compose up SERVICE```时会先启动被依赖容器
+  3. ```docker-compose stop```则会先关闭依赖容器后关闭被依赖容器  
+
+  - ```condition```:判断条件  
+    - ```service_started```：依赖的服务启动了便可以启动
+    - ```service_healthy```：依赖的服务启动了并且通过了healthcheck便可以启动  
+    - ```service_completed_successfully```：依赖的服务正常关闭  
+   
+- ```healthcheck```：用于检测 docker 服务是否健康运行
+
 ```volumes```：各个container之间的共享文件夹。  
 > While it is possible to declare volumes on the fly as part of the service declaration, this section allows you to create named volumes that can be reused across multiple services (without relying on volumes_from)
 
-可以被放置在 services 块内或外，其区别在于：定义在services外（top-level）的数据卷是全局共享的，可以在多个服务之间共享使用。
+可以被放置在```services```块内或外，其区别在于：定义在```services```外（top-level）的数据卷是全局共享的，可以在多个服务之间共享使用。
+
+```networks```：用于自定义网络。  
+如果未自定义会自动生成一个叫```folder_default```的网络（```folder```为当前所在文件夹名）。各个container之间可以通过```://container_name:container_port```的形式访问。
+```services```内用于定义该container可以访问的网络,在其内部可以用```aliases```定义该container在该网络里的别名
+
+```services```外则是对于各个网络的具体设置
