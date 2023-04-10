@@ -133,6 +133,12 @@ networks:
    
 - ```healthcheck```：用于检测 docker 服务是否健康运行
 
+- ```restart```：设置重启条件  
+  - no：默认选项，在任何情况下都不会重启
+  - always：总是重启
+  - on-failure：在容器非正常退出时（退出状态非0）重启
+  - unless-stopped：总是重启除非被用户停止
+ 
 ```volumes```：各个container之间的共享文件夹。  
 > While it is possible to declare volumes on the fly as part of the service declaration, this section allows you to create named volumes that can be reused across multiple services (without relying on volumes_from)
 
