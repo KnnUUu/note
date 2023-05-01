@@ -47,3 +47,7 @@ int main(void)
     return 0; 
 }
 ```
+
+### 概念
+运算符重载 operator overloading：重定义运算符
+常量 literals不会改变的固定值。
