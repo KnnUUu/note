@@ -49,10 +49,29 @@ int main(void)
 ```
 
 ### 编译
-[C/C++项目中.h和.inc文件区别](https://www.cnblogs.com/kelamoyujuzhen/p/10226493.html)
-原问题：[Difference between .h files and .inc files in c]ttps://stackoverflow.com/questions/38402525/difference-between-h-files-and-inc-files-in-c)
-C/C++的标准惯例是将class、function的声明信息写在.h文件中。.c文件写class实现、function实现、变量定义等等。然而对于template来说，它既不是class也不是function，而是可以生成一组class或function的东西。编译器（compiler）为了给template生成代码，他需要看到声明（declaration ）和定义（definition ），因此他们必须不被包含在.h里面。
-为了使声明、定义分隔开，定义写在自己文件内部，即.inc文件，然后在.h文件的末尾包含进来。当然除了.inc的形式，还可能有许多其他的写法.inc, .imp, .impl, .tpp, etc.
+[C/C++项目中.h和.inc文件区别](https://www.cnblogs.com/kelamoyujuzhen/p/10226493.html)  
+原问题：[Difference between .h files and .inc files in c]ttps://stackoverflow.com/questions/38402525/difference-between-h-files-and-inc-files-in-c)  
+C/C++的标准惯例是将class、function的声明信息写在.h文件中。.c文件写class实现、function实现、变量定义等等。然而对于template来说，它既不是class也不是function，而是可以生成一组class或function的东西。  
+编译器（compiler）为了给template生成代码，他需要看到声明（declaration ）和定义（definition ），因此他们必须不被包含在.h里面。  
+为了使声明、定义分隔开，定义写在自己文件内部，即.inc文件，然后在.h文件的末尾包含进来。当然除了.inc的形式，还可能有许多其他的写法.inc, .imp, .impl, .tpp, etc.  
+
+### 分离式编译 separate compilation
+分离编译模式是指：一个程序（项目）由若干个源文件共同实现，而每个源文件单独编译生成目标文件，最后将所有目标文件连接起来形成单一的可执行文件的过程。  
+分离编译模式是C/C++组织源代码和生成可执行文件的方式。在实际开发大型项目的时候，不可能把所有的源程序都放在一个头文件中，而是分别由不同的程序员开发不同的模块，再将这些模块汇总成为最终的可执行程序。  
+每个源文件生成独立的目标文件（obj文件），然后通过连接（Linking）将目标文件组成最终的可执行文件。  
+简要过程  
+1. 处理(Preprocessing)  
+.cpp -> .i  
+基本只处理#开头的文件  
+2. 编译(Compilation)
+.i -> .s
+把预处理完的文件，进行语法分析、词法分析、语义分析及优化后生成相应的汇编代码文件
+3. 汇编(Assembly)
+.s -> .o
+将汇编代码文件转变成机器可以执行的目标文件
+4. 连接(Linking)
+.o -> .exe
+将obj链接在一起组成可执行文件
 
 
 ### 概念
