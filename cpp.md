@@ -48,6 +48,13 @@ int main(void)
 }
 ```
 
+### 编译
+[C/C++项目中.h和.inc文件区别](https://www.cnblogs.com/kelamoyujuzhen/p/10226493.html)
+原问题：[Difference between .h files and .inc files in c]ttps://stackoverflow.com/questions/38402525/difference-between-h-files-and-inc-files-in-c)
+C/C++的标准惯例是将class、function的声明信息写在.h文件中。.c文件写class实现、function实现、变量定义等等。然而对于template来说，它既不是class也不是function，而是可以生成一组class或function的东西。编译器（compiler）为了给template生成代码，他需要看到声明（declaration ）和定义（definition ），因此他们必须不被包含在.h里面。
+为了使声明、定义分隔开，定义写在自己文件内部，即.inc文件，然后在.h文件的末尾包含进来。当然除了.inc的形式，还可能有许多其他的写法.inc, .imp, .impl, .tpp, etc.
+
+
 ### 概念
-运算符重载 operator overloading：重定义运算符
-常量 literals不会改变的固定值。
+运算符重载 operator overloading：重定义运算符  
+常量 literals：的固定值  
