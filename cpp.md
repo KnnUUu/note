@@ -95,6 +95,20 @@ C/C++的标准惯例是将class、function的声明信息写在.h文件中。.c�
     - 使用动态链接库的应用程序不是自完备的，它依赖的DLL模块也要存在，如果使用载入时动态链接，程序启动时发现DLL不存在，系统将终止程序并给出错误信息
     - 速度比静态链接慢
     
+### 指针和引用的区别 pointer & reference  
+引用本身并非一个对象，引用定义后就不能绑定到其他的对象了  
+指针并没有此限制，相当于变量一样使用  
+
+### 指针和const  
+pointer to const（指向常量的指针）：不能用于改变其所指对象的值
+```cpp
+const double pi = 3.14; const double *cptr = &pi;。
+```   
+const pointer：指针本身是常量，也就是说指针固定指向该对象，（存放在指针中的地址不变，地址所对应的那个对象值可以修改）
+```cpp
+int i = 0; int *const ptr = &i;  
+```
+
 ### 概念
 运算符重载 operator overloading：重定义运算符  
 常量 literals：的固定值  
