@@ -1,10 +1,20 @@
 ### 关键字
 
 ```Inline```：直接把里面的内容粘贴到函数被调用的地方，可以减少访问函数时花费的时间，但如果函数太长反而会使时间变长，所以一般只用于只有几行的函数。  
+  
 ```Constexpr```（constant expression）： 编译时就可以算出来（前提是为了算出它所依赖的东西也是在编译期可以算出来的），花费更多编译时间但减少运行时间。  
+  
 ```Const```： 保证变量运行时不直接被修改。  
-```template``` : 把类型当作变量传到函数，使得同一个函数可以处理多种类型的变量。在编译的时候将程序复制成几个对应不同变量类型的函数。与宏不同的地方在于template会对变量类型进行检查。  
+  
+```template``` : 把类型当作变量传到函数，使得同一个函数可以处理多种类型的变量。在编译的时候将程序复制成几个对应不同变量类型的函数。与宏不同的地方在于template会对变量类型进行检查。     
 ```extern```：存储类用于提供一个全局变量的引用，全局变量对所有的程序文件都是可见的  
+  
+```decltype``` 类型指示符  
+从表达式的类型推断出要定义的变量的类型
+```cpp
+// 推断sum的类型是函数f的返回类型
+decltype(f()) sum = x; 
+```
 
 ### OOP
 基类 base class 、派生类 subclass
@@ -108,6 +118,33 @@ const pointer：指针本身是常量，也就是说指针固定指向该对象�
 ```cpp
 int i = 0; int *const ptr = &i;  
 ```
+
+
+### 头文件保护符 header guard
+存储于头文件内， 防止多个头文件include时候互相交叉，重复定义
+```cpp
+#ifndef SALES_DATA_H  //SALES_DATA_H未定义时为真
+#define SALES_DATA_H
+struct Sale_data{
+    ...
+}
+#endif
+```
+
+### 显式类型转换
+- `static_cast`  
+  任何明确定义的类型转换，只要不包含底层const，都可以使用。  
+  `double slope = static_cast<double>(j); `
+- `dynamic_cast`  
+  支持运行时类型识别  
+- `const_cast`  
+  只能改变运算对象的底层const，一般可用于去除const性质。  
+  ```cpp
+  const char *pc; 
+  char *p = const_cast<char*>(pc);
+  ```  
+- `reinterpret_cast`  
+  通常为运算对象的位模式提供低层次上的重新解释  
 
 ### 概念
 运算符重载 operator overloading：重定义运算符  
