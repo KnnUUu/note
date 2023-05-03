@@ -15,6 +15,20 @@
 // 推断sum的类型是函数f的返回类型
 decltype(f()) sum = x; 
 ```
+## 函数 function
+### 基础
+函数定义时叫形参（parameter）  
+函数调用时叫实参（argument）  
+形参和实参的个数和类型必须匹配上  
+
+### main处理命令行选项
+`int main(int argc, char *argv[]){...}`  
+`argc` 参数的个数  
+`argv` 参数C风格字符串数组  
+
+### 有返回值函数
+- return语句的返回值的类型必须和函数的返回类型相同，或者能够隐式地转换成函数的返回类型  
+- 不要返回局部对象的引用或指针  
 
 ### OOP
 基类 base class 、派生类 subclass
@@ -118,6 +132,8 @@ const pointer：指针本身是常量，也就是说指针固定指向该对象�
 ```cpp
 int i = 0; int *const ptr = &i;  
 ```
+顶层 ( Top-level ) const：指针本身是个常量  
+底层 ( Low-level ) const：指针指向的对象是个常量,拷贝时严格要求相同的底层const资格  
 
 
 ### 头文件保护符 header guard
@@ -146,6 +162,18 @@ struct Sale_data{
 - `reinterpret_cast`  
   通常为运算对象的位模式提供低层次上的重新解释  
 
+## 内存
+### 栈内存与堆内存
+Heap memory只是一个名字，和heap的数据结构没有关系
+### 内存碎片化
+
+### try语句块和异常处理
+throw表达式：异常检测部分使用 throw表达式来表示它遇到了无法处理的问题。我们说 throw引发 raise了异常。  
+try语句块：以 try关键词开始，以一个或多个 catch字句结束。 try语句块中的代码抛出的异常通常会被某个 catch捕获并处理。 catch子句也被称为异常处理代码。  
+异常类：用于在 throw表达式和相关的 catch子句之间传递异常的具体信息。  
+
 ### 概念
 运算符重载 operator overloading：重定义运算符  
 常量 literals：的固定值  
+左值 L-value：可以取地址，位于等号左边  
+右值 R-value：没法取地址，位于等号右边  
