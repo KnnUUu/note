@@ -22,6 +22,7 @@ decltype(f()) sum = x;
 这些情况应该使用  
 - 多线程都要用到某一个变量且该变量的值会被改变时
 - 可能由于外部原因导致变量改变时  
+
 [参考](https://www.runoob.com/w3cnote/c-volatile-keyword.html)  
 
 ## 函数 function
