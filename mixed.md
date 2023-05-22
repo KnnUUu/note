@@ -7,9 +7,4 @@
 ```LF(LINE FEED) \r``` 光标移动至行头下一行但不改变当前位置，Unix用  
 ```CRLF```windows用
 
----  
-### daemon process  
-  
-Linux上与用户操作无关，系统启动后就会一起启动的后台程序。基本等同windows的service
 
----  
