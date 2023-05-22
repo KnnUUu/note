@@ -27,14 +27,26 @@
 
 ## 创建型模式（Creational Patterns）  
 
+### 工厂模式（Factory Pattern）
+> In Factory pattern, we create object without exposing the creation logic to the client and refer to newly created object using a common interface.
+
+通过共同的接口来创造新对象，接口不暴露内部逻辑
+```java
+      Shape shape1 = shapeFactory.getShape("CIRCLE");
+      shape1.draw();
+
+      Shape shape2 = shapeFactory.getShape("RECTANGLE");
+      shape2.draw();
+```
 ## 结构型模式（Structural Patterns）
 
 ## 行为型模式（Behavioral Patterns）
 
 ## J2EE 模式
-# MVC 模式（MVC Pattern）
+### MVC 模式（MVC Pattern）
 MVC -> Model-View-Controller（模型-视图-控制器） 模式。用于应用程序的分层开发。
 Model（模型） - 模型代表一个存取数据的对象或 JAVA POJO。它也可以带有逻辑，在数据变化时更新控制器。
 View（视图） - 视图代表模型包含的数据的可视化。
 Controller（控制器） - 控制器作用于模型和视图上。它控制数据流向模型对象，并在数据变化时更新视图。它使视图与模型分离开。
 <img src="https://github.com/KnnUUu/note/assets/44579350/fab013b0-576c-40b4-89ad-e0a47ecaf616"  width="50%" height="50%" />
+
