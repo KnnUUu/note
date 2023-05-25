@@ -176,6 +176,37 @@ struct Sale_data{
 ### 栈内存与堆内存
 Heap memory只是一个名字，和heap的数据结构没有关系
 ### 内存碎片化
+### 智能指针 Smart pointer
+传统c++里用`new`跟`delete`或者RAII进行内存管理容易出错造成内存泄漏，所以现代c++引入了智能指针。（`RAII：Resource Acquisition Is Initialization`，指经由类的构造函数跟析构函数进行资源的获得与释放）  
+自带计数器，每次都引用时增加，反之指针被删除时减少，在变为0的时候销毁释放内存。  
+- `shared_ptr`:允许多个指针指向同一个对象
+```cpp  
+auto pointer = std::make_shared<int>(10);
+auto pointer2 = pointer; // 引用计数+1
+auto pointer3 = pointer; // 引用计数+1
+```
+- `unique_ptr`:独占所指向的对象  
+```cpp
+  std::unique_ptr<int> pointer = std::make_unique<int>(10); // make_unique 从 C++14 引入  
+  std::unique_ptr<int> pointer2 = pointer; // 非法
+```
+虽然无法共享，但是可以使用`std::move`转移给其他`unique_ptr`
+```cpp
+std::unique_ptr<int> p2(std::move(p1)); //将p1指向的对象变成p2指向，此后p1为空
+```
+- `weak_ptr`:引用时不会引起计数增加
+下面这种用法会导致离开mian后，ab内部依然互相指向导致无法被删除。
+这种情况下用`weak_ptr`则可以避免内存泄漏
+```cpp
+struct A { std::shared_ptr<B> pointer; };
+struct B { std::shared_ptr<A> pointer; };
+int main() {
+    auto a = std::make_shared<A>();
+    auto b = std::make_shared<B>();
+    a->pointer = b;
+    b->pointer = a;
+}
+```
 
 ### try语句块和异常处理
 throw表达式：异常检测部分使用 throw表达式来表示它遇到了无法处理的问题。我们说 throw引发 raise了异常。  
