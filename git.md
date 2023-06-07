@@ -1,3 +1,4 @@
+### stash
 stash
 将目前修改到一般的内容保存起来，可以后面随时恢复
 
@@ -16,3 +17,8 @@ stash drop
 
 stash pop
 apply+drop
+
+### 将修改merge到其他brunch
+1. Switch/Checkout到需要被merge的branch
+2. 打开log，找到想merge的log，Cherry Pick this comment
+3. 目前所在brunch已经有了修改记录，push就可以
