@@ -18,3 +18,19 @@ GET和POST的对象
   例：`https://i.leiue.com/avatar/?size=100&time=20171120`  
 
 参考：https://blog.csdn.net/lucky541788/article/details/81836466  
+
+### APC - Alternative PHP Cache - 可选PHP缓存  
+一种对PHP有效的开放源高速缓冲储存器工具，可用于缓存和优化Web服务器上的PHP代码，改善服务器性能  
+
+### APCu - APC User
+> APCu is APC stripped of opcode caching.
+
+APCU是从APC剥离出来的用户数据缓存功能，去掉了apc的opcode cache    
+提供用户数据缓存功能，和redis/memcache类似  
+
+> OPcache improves PHP performance by storing precompiled script bytecode in shared memory, thereby removing the need for PHP to load and parse scripts on each request. 
+
+将PHP代码编译之后所产生的bytecode暂存在共享内存内供重复使用，以提升应用的运行效率
+
+自PHP5.5之后，APC已经被Zend OPcache + APCu的组合取代
+
