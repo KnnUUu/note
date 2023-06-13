@@ -2,6 +2,13 @@
 世界使用排名第一的开源服务器软件。  
 将电脑变成一台服务器，开放特定的网络端口，用以接收来自网络上发送到这台机器的HTTP请求，对请求的内容进行处理并作出相应的响应  
 
+GET和POST的对象  
+- HTML、CSS、JS、RAR、TXT等文件  
+  直接把文件的内容发回客户端  
+- PHP文件  
+  PHP.EXE程序，把文件、调用的参数传递给PHP.EXE，然后把PHP.EXE执行的结果反馈给客户端  
+  PHP可以调用各种库执行各类功能，最典型的就是查询数据库  
+
 ### URL符号
 - `#` 在一个网页中，URL 不变的情况下，通过添加“#anchor_name”的字符在 URL 最后可以跳转到当前网页中已经定义好的锚点（id=“anchor_name”）位置  
   例：`https://zhan.leiue.com/fanly-mip.html#buy`  
