@@ -42,3 +42,16 @@ APCU是从APC剥离出来的用户数据缓存功能，去掉了apc的opcode cac
 一种Javascript的运行环境。  
 原本js只能在浏览器上运行，node.js使得其可以服务端上执行操作
 
+### 几种服务器
+- Web Server
+  handles mainly HTTP protocols
+- Application Server
+  deals with several different protocols, including, but not limited, to HTTP
+- Proxy server
+  act as a bridge between a host server and a client server. 
+- Virtual machine (VM)
+  virtual machines store and connect data strictly through virtual space.
+- File transfer protocol (FTP) server
+  receiving, sending, deleting files
+- Database server
+参考：https://www.indeed.com/career-advice/career-development/types-of-servers
