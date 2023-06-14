@@ -32,5 +32,13 @@ APCU是从APC剥离出来的用户数据缓存功能，去掉了apc的opcode cac
 
 将PHP代码编译之后所产生的bytecode暂存在共享内存内供重复使用，以提升应用的运行效率
 
-自PHP5.5之后，APC已经被Zend OPcache + APCu的组合取代
+自PHP5.5之后，**APC已经被Zend OPcache + APCu的组合取代**
+
+### Memcached
+一种基于内存的key-value存储，用来存储小块的任意数据（字符串、对象）。这些数据可以是数据库调用、API调用或者是页面渲染的结果。 
+缓存数据库查询结果，减少数据库访问次数，以提高动态Web应用的速度、提高可扩展性。 
+
+### node.js
+一种Javascript的运行环境。  
+原本js只能在浏览器上运行，node.js使得其可以服务端上执行操作
 
