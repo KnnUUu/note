@@ -1,7 +1,25 @@
-用的是mysql但其他应该也差不了多少
+### 常用命令
+登录：`mysql -u[id] -p[password]`  
+登录（无密码）：`mysql -uroot`  
+退出：`exit;`  
+数据库一览：`SHOW DATABASES;`  
+选择数据库:`USE [dbname];`  
+查看table设置：`DESC [tablename]; or DESCRIBE [tablename];`  
+查看更详细的table设置：`SHOW CREATE TABLE [tablename];`  
+获取特定栏数据：`SELECT [tablename1,tablename2...] FROM [tablename] WHERE [conditions];`  
+获取整个table数据：`SELECT * FROM [tablename] WHERE [conditions];`  
+删除数据（无法恢复:warning:）：`DELETE FROM [tablename] WHERE [conditions];`  
+插入数据：`INSERT INTO [tablename] (column1, column2, column3, ...) VALUES ([column1 value], [column2 value], ...);`  
+变更数据：`UPDATE [tablename] SET [colunm name] = [value] WHERE [conditions];`  
+删除table：`DROP TABLE [tablename];`  
+创建新表：`CREATE TABLE IF NOT EXISTS [tblname] (col_name data_type, ...);`  
+增加栏：`ALTER TABLE [tblname] ADD [col_name] [data_type];`  
+删除栏：`ALTER TABLE [tblname] DROP [col_name];`  
+现在时间：`NOW()` or`CURRENT_TIMESTAMP()`  
+调整时间：`ADDTIME(NOW(),'06:00:00') // 6小时後` `SUBTIME(NOW(),'06:00:00') // 6小时前`    
+IN / NOT IN：`SELECT * FROM UserInfo WHERE id IN (1,2,3);`  
 
 ### 性能优化
-
 1. 连接配置优化  
    1. 服务端配置  
       - 增加可用连接数  
