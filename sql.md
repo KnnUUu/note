@@ -37,8 +37,8 @@
   `ADDTIME(NOW(),'06:00:00') // 6小时後` `SUBTIME(NOW(),'06:00:00') // 6小时前`    
 - IN / NOT IN  
   `SELECT * FROM UserInfo WHERE id IN (1,2,3);`  
-- GROUP BY
-  将拥有同样值得数据集合起来，一般与SUM, COUNT, AVG, MAX, MIN配合使用
+- GROUP BY  
+  将拥有同样值得数据集合起来，一般与SUM, COUNT, AVG, MAX, MIN配合使用   
   ```sql
   SELECT AGE, AVG(SALARY) as avg_salary
   FROM CUSTOMERS
