@@ -213,6 +213,21 @@ throw表达式：异常检测部分使用 throw表达式来表示它遇到了无
 try语句块：以 try关键词开始，以一个或多个 catch字句结束。 try语句块中的代码抛出的异常通常会被某个 catch捕获并处理。 catch子句也被称为异常处理代码。  
 异常类：用于在 throw表达式和相关的 catch子句之间传递异常的具体信息。  
 
+### namespace
+- unnamed namespace
+  允许不给namespace定义名字，在这种情况下，定义的变量只能在本文件内调用。  
+  ```cpp
+  namespace
+  {
+      void f(){cout<<"a";}
+  }
+  
+  int main()
+  {
+      f();
+  }
+  ```
+  
 ### 概念
 运算符重载 operator overloading：重定义运算符  
 常量 literals：的固定值  
