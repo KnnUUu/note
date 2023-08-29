@@ -19,4 +19,5 @@
   ```
   总时间复杂度  
   = O(V+V*e(v))  
-  = O(V+E)  
+  = O(V+E)
+  参考：https://stackoverflow.com/questions/26549140/breadth-first-search-time-complexity-analysis  
