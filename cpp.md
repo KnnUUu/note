@@ -233,3 +233,11 @@ try语句块：以 try关键词开始，以一个或多个 catch字句结束。 
 常量 literals：的固定值  
 左值 L-value：可以取地址，位于等号左边  
 右值 R-value：没法取地址，位于等号右边  
+
+## 性能  
+### i++ and ++i  
+++i 是先加后赋值  
+i++ 是先赋值后加  
+因为i++需要在执行前复制一个变量，而i++只需要一开始加完不需要另外的变量，++i会快一点  
+但是，如果是使用现代编译器的话，最终编译出来的文件并没有区别  
+[参考](https://stackoverflow.com/questions/24886/is-there-a-performance-difference-between-i-and-i-in-c)  
