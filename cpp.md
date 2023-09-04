@@ -40,20 +40,31 @@ decltype(f()) sum = x;
 - return语句的返回值的类型必须和函数的返回类型相同，或者能够隐式地转换成函数的返回类型  
 - 不要返回局部对象的引用或指针  
 
-### OOP
-基类 base class 、派生类 subclass
+## OOP
+三大特性  
+- 封装 Encapsulation  
+- 继承 Inheritance  
+- 多态 Polymorphism  
+
+### 封装
+隐藏具体实现方法，只暴露必须的接口供外界使用  
+使用时只需要调用接口而不需要知道内部处理细节  
+
+### 继承
+基类 base class 、派生类 subclass  
 |访问|public|protected|private|
 |---|---|---|---|
 |同一个类|:o:|:o:|:o:|
 |派生类|:o:|:o:|:x:|
 |外部类|:o:|:x:|:x:|
 
-多继承 mulitple inheritance：继承多个父类的特性
+多继承 mulitple inheritance：继承多个父类的特性  
 ```cpp
 class <派生类名>:<继承方式1><基类名1>,<继承方式2><基类名2>,…
 ```
 ### 多态
-虚函数 virtual function：virtual dataType functionName()  
+“一个接口，多种实现”，指一个基类中派生出了不同的子类，且每个子类在继承了同样的方法名的同时又对父类的方法做了不同的实现，这就是同一种事物表现出的多种形态。  
+虚函数 `virtual function：virtual dataType functionName()`  
 派生类中重新定义基类中定义的虚函数时，会告诉编译器不要静态链接到该函数。定义虚函数是为了允许用基类的指针来调用子类的这个函数。  
 纯虚函数 pure virtual function：virtual dataType functionName() = 0  
 在基类中又不能对虚函数给出有意义的实现时使用  
