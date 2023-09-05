@@ -205,9 +205,9 @@ auto pointer3 = pointer; // 引用计数+1
 ```cpp
 std::unique_ptr<int> p2(std::move(p1)); //将p1指向的对象变成p2指向，此后p1为空
 ```
-- `weak_ptr`:引用时不会引起计数增加
-下面这种用法会导致离开mian后，ab内部依然互相指向导致无法被删除。
-这种情况下用`weak_ptr`则可以避免内存泄漏
+- `weak_ptr`:引用时不会引起计数增加  
+下面这种用法会导致离开mian后，ab内部依然互相指向导致无法被删除  
+这种情况下用`weak_ptr`则可以避免内存泄漏  
 ```cpp
 struct A { std::shared_ptr<B> pointer; };
 struct B { std::shared_ptr<A> pointer; };
