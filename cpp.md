@@ -156,6 +156,7 @@ int i = 0; int *const ptr = &i;
 顶层 ( Top-level ) const：指针本身是个常量  
 底层 ( Low-level ) const：指针指向的对象是个常量,拷贝时严格要求相同的底层const资格  
 
+Dangling pointer(悬垂指针):A pointer pointing to a memory location that has been deleted (or freed) is called dangling pointer.  
 
 ### 头文件保护符 header guard
 存储于头文件内， 防止多个头文件include时候互相交叉，重复定义
