@@ -1,3 +1,22 @@
+### 2维数组
+以下写法初始化数组会导致每一行的数组都是参照同一行的数据，也就是改了某一行的数据其他行的数据也会一起改变  
+```python
+rows, cols = (5, 5)
+arr = [[0]*cols]*rows
+print(arr, "before")
+ 
+arr[0][0] = 1 # update only one element
+print(arr, "after")
+```
+```
+([[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 'before')
+([[1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [1, 0, 0, 0, 0]], 'after')
+```
+这种写法就没有问题  
+```python
+arr = [[0 for i in range(cols)] for j in range(rows)]
+```
+https://www.geeksforgeeks.org/python-using-2d-arrays-lists-the-right-way/  
 ### 正则表达
 - `(...)`
   用于捕获分组，匹配后的结果会放在`groups()`里，`group(0)`是无分组，`group(x)`则是第x个`(...)`里的结果  
