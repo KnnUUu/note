@@ -46,8 +46,8 @@
   二分查找边界条件  
   https://leetcode-cn.com/problems/binary-search/solution/er-fen-cha-zhao-de-xun-huan-bu-bian-liang-zhi-yao-/  
 
-- BFS  
-  为什么BFS时间复杂度是O(E+V)？
+- BFS&DFS  
+  为什么BFS&DFS时间复杂度是O(E+V)？
   ```python
   def bfs(visited, graph, node): #function for BFS
     visited.append(node)
@@ -63,7 +63,7 @@
   总时间复杂度  
   = O(V+V*e(v))  
   = O(V+E)  
-  参考：https://stackoverflow.com/questions/26549140/breadth-first-search-time-complexity-analysis  
+  参考：https://stackoverflow.com/questions/26549140/breadth-first-search-time-complexity-analysis / https://stackoverflow.com/questions/11468621/why-is-the-time-complexity-of-both-dfs-and-bfs-o-v-e   
 
 - 回溯（huísù）法 BackTracking  
   Backtracking is an improvement to the brute force approach.  
