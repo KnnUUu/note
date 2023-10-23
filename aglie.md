@@ -58,4 +58,7 @@
 - Sprint Backlog - 冲刺列表  
   本次Sprint迭代包含的任务列表，比较具体  
 - Product Increment - 产品增量  
-  新版产品  
+  新版产品
+
+# 参考
+https://www.woshipm.com/pd/4331832.html
