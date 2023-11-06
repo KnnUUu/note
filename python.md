@@ -1,3 +1,14 @@
+## 常数 constant
+### 无限 infinity
+```python
+positive_infinity = float('inf')
+negative_infinity = float('-inf')
+
+import math
+positive_infinity = math.inf
+negative_infinity = -math.inf
+```
+
 ## hash
 ### set
 ```python
@@ -6,6 +17,8 @@ a.add(1)
 if 1 in a: print("exist")
 ```
 set.add()
+
+## 数组 array
 ### 2维数组
 以下写法初始化数组会导致每一行的数组都是参照同一行的数据，也就是改了某一行的数据其他行的数据也会一起改变  
 ```python
@@ -25,6 +38,8 @@ print(arr, "after")
 arr = [[0 for i in range(cols)] for j in range(rows)]
 ```
 https://www.geeksforgeeks.org/python-using-2d-arrays-lists-the-right-way/  
+
+## 字符串 string
 ### 正则表达
 - `(...)`
   用于捕获分组，匹配后的结果会放在`groups()`里，`group(0)`是无分组，`group(x)`则是第x个`(...)`里的结果  
@@ -36,7 +51,7 @@ https://www.geeksforgeeks.org/python-using-2d-arrays-lists-the-right-way/
   ('abc123@mail.com','abc123','mail.com')
   ```
   
-### 字符串
+### 输出
 If you don’t want characters prefaced by \ to be interpreted as special characters, you can use raw strings by adding an r before the first quote:  
 ```python
 >>> print('C:\some\name')  # here \n means newline!
