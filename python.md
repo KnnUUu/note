@@ -1,3 +1,11 @@
+## hash
+### set
+```python
+s = set()
+a.add(1)
+if 1 in a: print("exist")
+```
+set.add()
 ### 2维数组
 以下写法初始化数组会导致每一行的数组都是参照同一行的数据，也就是改了某一行的数据其他行的数据也会一起改变  
 ```python
