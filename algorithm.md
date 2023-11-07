@@ -10,7 +10,9 @@
 - 底层 red-black trees  
 ### Hash
 - 无序  
-- Search，insert，delete  O(1) -> Average  O(n) -> Worst Case
+- Search，insert，delete
+  O(1) -> Average  
+  O(n) -> Worst Case  
 - C++ std::unordered_map /std::unordered_set / Python dict() set()
 - 因为自带的hash无法计算一些数据型（比如unordered_set<pair<int, int>>），所以当使用自定义类型时需要另外定义hash函数，面试竞赛时还是用vector吧
 ### Heap
