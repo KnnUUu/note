@@ -10,7 +10,7 @@
 - 底层 red-black trees  
 ### Hash
 - 无序  
-- Search，insert，delete
+- Search，insert，delete  
   O(1) -> Average  
   O(n) -> Worst Case  
 - C++ std::unordered_map /std::unordered_set / Python dict() set()
