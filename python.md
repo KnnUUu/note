@@ -1,3 +1,14 @@
+## math
+```python
+# 排列 Permutation 从n里选k个
+math.perm(n, k=None) # n! / (n - k)!
+# 组合 Combination 从n里选k个
+math.comb(n, k) # n! / (k! * (n - k)!)
+
+math.ceil(x)
+math.floor(x)
+```
+
 ## 常数 constant
 ### 无限 infinity
 ```python
