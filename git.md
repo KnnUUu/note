@@ -1,3 +1,12 @@
+### fetch
+取得远程repository但不反映到本地repository  
+
+### merge
+将某个branch的修改反映到另外一个branch  
+
+### pull
+等同于fetch+merge，基本是更新的意思  
+
 ### stash
 stash
 将目前修改到一般的内容保存起来，可以后面随时恢复
