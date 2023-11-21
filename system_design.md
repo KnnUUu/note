@@ -20,3 +20,23 @@ trade-off
 |scale well as users increse|no⭐|yes|
 
 Real world development:combine both methods benefits⭐　
+
+###  System Design Primer ⭐️: How to start with distributed systems? 
+scale 扩展  
+1. Vertical scaling   
+2. Cron job: Preparing before hand at non-peak hours  
+     
+Resilience 冗余  
+4. Backup: keep backups and avoid single point of failure(master -> slave)  
+5. Horizontal scaling   
+
+expansion  
+6. Microservices 划分任务使得特定服务器只需要应对特定任务  
+7. Distributed Systems 为了防止宕机之类的问题使得业务停摆又或者使得不同区域的用户都可以低延迟使用，需要将系统分散开  
+8. Load balancing 根据服务器负载情况将请求发送到指定服务器以达到负载均衡  
+9. Decoupling  
+10. Logging and metric  
+11. Extensibility  
+
+High level design:服务器怎么布置，请求跟回复流向  
+Low level design:具体需要什么class，什么数据结构    
