@@ -5,6 +5,8 @@
 ⭕：S1 S2 S3 S4各自减少5%，合并起来给新服务器S5（5+5+5+5+5）  
 ❌：S1减少5%合并到S2，S2减少10%合并到S3，S3减少15%合并到S4，S4减少20%构成S5（5+5+10+10+15+15+20+20）  
 
+---
+
 ### Horizontal vs. Vertical Scaling
 应对更多请求的方法，也就是scalability（可扩展性）  
 1. 买台更大的电脑（Vertical Scaling）   
@@ -20,6 +22,8 @@ trade-off
 |scale well as users increse|no⭐|yes|
 
 Real world development:combine both methods benefits⭐　
+
+---
 
 ###  System Design Primer ⭐️: How to start with distributed systems? 
 scale 扩展  
@@ -40,3 +44,9 @@ expansion
 
 High level design:服务器怎么布置，请求跟回复流向  
 Low level design:具体需要什么class，什么数据结构    
+
+### What is a MESSAGE QUEUE and Where is it used?   
+用户向服务器发送请求时，服务器会把需要做的事情放入列表然后回复用户收到请求，在任务完成后再次联系并发送处理结果，使得不需要一直占用用户（异步处理asynchronous processing）  
+Fault tolerance: 某一台服务器宕机时，虽然无法继续接受请求，但可以把已经接收到的请求发送给其他服务器处理。因为不可能宕机后再发送出去，所以必须先保存再DB  
+MESSAGE QUEUE：每隔一段时间给处理服务器发送请求监测是否宕机，如果宕机会把任务发送给其他服务器。有load balancing功能。QUEUE会记录各个任务完成状态  
+实际例子：Rabbit MQ、Zero MQ、JMS  
