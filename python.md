@@ -1,10 +1,20 @@
-## symtax
-`try`、`except `：用于处理runtime error  
+## symtax  
+`try`:测试一段代码是否出错    
+`except`：出错时的处理  
+`else`：没出错时的处理  
+`finally`：不管有没有出错都会执行的处理  
+`raise`：发出异常（Exception）  
 ```python
 try: 
     #可能发生错误的处理
-except #错误类型（可省略）:
-    #错误发生时候的处理
+except error_type:
+    #特定错误发生时候的处理
+expect:
+    #其他错误发生时候的处理
+else:
+    #没出错时的处理
+finally:
+    #不管有没有出错都会执行的处理 
 ```
 
 ## math
