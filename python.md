@@ -1,3 +1,12 @@
+## symtax
+`try`、`except `：用于处理runtime error  
+```python
+try: 
+    #可能发生错误的处理
+except 错误类型（可省略）:
+    #错误发生时候的处理
+```
+
 ## math
 ```python
 # 排列 Permutation 从n里选k个
