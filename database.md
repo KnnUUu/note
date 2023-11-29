@@ -1,3 +1,22 @@
+## 概要
+### 数据库种类
+1. 关系数据库 Relational databases  
+   MySQL、MariaDB、Percona Server（MySQL的代替品·）、PostgreSQL、Microsoft Access、Microsoft SQL Server、Google Fusion Tables、FileMaker、Oracle数据库、Sybase、dBASE、Clipper、FoxPro、foshub
+   popular, historically, worked well.
+   
+2. 非关系型数据库（NoSQL） Non-Relational databases   
+   BigTable（Google）、Cassandra、MongoDB、CouchDB  
+
+   Non-relational databases might be the right choice if:  
+   - Your application requires super-low latency.  
+   - Your data are unstructured, or you do not have any relational data.    
+   - You only need to serialize and deserialize data (JSON, XML, YAML, etc.).  
+   - You need to store a massive amount of data.  
+
+3. 键值（key-value）数据库  
+   Apache Cassandra（为Facebook所使用）：高度可扩展、Dynamo、LevelDB（Google）  
+   
+## SQL
 ### 常用命令
 - 登录  
   `mysql -u[id] -p[password]`  
