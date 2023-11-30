@@ -53,5 +53,5 @@ APCU是从APC剥离出来的用户数据缓存功能，去掉了apc的opcode cac
   virtual machines store and connect data strictly through virtual space.
 - File transfer protocol (FTP) server
   receiving, sending, deleting files
-- Database server
+- Database server  
 参考：https://www.indeed.com/career-advice/career-development/types-of-servers
