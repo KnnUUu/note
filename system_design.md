@@ -1,4 +1,4 @@
-![image](https://github.com/KnnUUu/note/assets/44579350/20e17e07-09a0-43a0-88eb-b93e114d4821)### What is LOAD BALANCING?
+### What is LOAD BALANCING?
 当需要处理大量请求时，一台服务器不足以应对，所以需要设置多台服务器。LOAD BALANCING用于解决客户端应该向哪台服务器发送请求的问题，使得各台服务器的负载均衡  
 当请求增加时，需要增加服务器来应对。移动服务器数据时，应该尽可能保持原有状态，使得原有的缓存可以继续使用，所以需要使用constant hashing  
 假设本来有4台服务器，需要增设到5台    
