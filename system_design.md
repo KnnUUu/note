@@ -1,4 +1,4 @@
-### What is LOAD BALANCING?
+![image](https://github.com/KnnUUu/note/assets/44579350/20e17e07-09a0-43a0-88eb-b93e114d4821)### What is LOAD BALANCING?
 当需要处理大量请求时，一台服务器不足以应对，所以需要设置多台服务器。LOAD BALANCING用于解决客户端应该向哪台服务器发送请求的问题，使得各台服务器的负载均衡  
 当请求增加时，需要增加服务器来应对。移动服务器数据时，应该尽可能保持原有状态，使得原有的缓存可以继续使用，所以需要使用constant hashing  
 假设本来有4台服务器，需要增设到5台    
@@ -50,3 +50,14 @@ Low level design:具体需要什么class，什么数据结构
 Fault tolerance: 某一台服务器宕机时，虽然无法继续接受请求，但可以把已经接收到的请求发送给其他服务器处理。因为不可能宕机后再发送出去，所以必须先保存再DB  
 MESSAGE QUEUE：每隔一段时间给处理服务器发送请求监测是否宕机，如果宕机会把任务发送给其他服务器。有load balancing功能。QUEUE会记录各个任务完成状态  
 实际例子：Rabbit MQ、Zero MQ、JMS  
+
+### AWS
+- EC2(Elastic Compute Cloud)  
+  在aws上构建的虚拟服务器，类似本地服务器  
+- Aurora  
+  aws提供的关系型数据库，基本功能操作都和mysql一样  
+- ElasticCache  
+  redis跟Memcached  
+  在内存上运行的数据库  
+
+## 例子
