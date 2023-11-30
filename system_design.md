@@ -66,6 +66,25 @@ https://aws.amazon.com/cn/elasticache/redis-vs-memcached/?nc1=h_ls
 - Memcached只支持key/value，redis还支持string,list,dict,set,zset,hyperloglog   
 - Memcached无法备份，redis可以  
 - Memcached只有单体，redis可以有Replication  
-- redis支持pub/sub（发布-订阅）  
-  
+- redis支持pub/sub（发布-订阅）
+
+### 服务器种类
+- web server  
+  主要处理http请求，表示静态网页    
+- app server  
+  也可以处理http但主要是处理app内部协议  
+- CDN(Content delivery network)  
+  用于发送大容量且变化少的资源，比如web网页、视频、游戏内资源  
+  为了降低延迟，一般会在各个各个地区or国家设置  
+- load balancer  
+  将客服端的请求平均分配给各个服务器分散避免拥堵  
+- database server  
+  用于记录需要持久存在的数据  
+  用户不会直接访问，而是app或者web server访问  
+  每隔一段时间会备份：master → slave  
+  master用于读写，slave只用于读    
+- cache server  
+  记录DB常被访问的数据，减少DB的负荷  
+  记录不需要被DB记录的临时数据  
+
 ## 例子
