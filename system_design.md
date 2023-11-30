@@ -60,4 +60,12 @@ MESSAGE QUEUE：每隔一段时间给处理服务器发送请求监测是否宕�
   redis跟Memcached  
   在内存上运行的数据库  
 
+### Redis VS Memcached
+https://aws.amazon.com/cn/elasticache/redis-vs-memcached/?nc1=h_ls  
+- 除了支持多线程以外，Memcached并没有比redis好  
+- Memcached只支持key/value，redis还支持string,list,dict,set,zset,hyperloglog   
+- Memcached无法备份，redis可以  
+- Memcached只有单体，redis可以有Replication  
+- redis支持pub/sub（发布-订阅）  
+  
 ## 例子
