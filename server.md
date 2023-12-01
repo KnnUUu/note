@@ -39,8 +39,19 @@ APCU是从APC剥离出来的用户数据缓存功能，去掉了apc的opcode cac
 缓存数据库查询结果，减少数据库访问次数，以提高动态Web应用的速度、提高可扩展性。 
 
 ### node.js
-一种Javascript的运行环境。  
-原本js只能在浏览器上运行，node.js使得其可以服务端上执行操作
+一种Javascript的运行环境（不是library也不是编程语言）  
+原本js只能在浏览器上运行，node.js使得其可以在OS上运行。利用这个特性使得JS可以在服务器上运行  
+
+为什么使用node.js？
+1. 版本兼容  
+   javascript每年都会更新，但如果浏览器版本太旧则会有无法使用的问题  
+   通过使用transcompile技术，可以把js从新版本转换旧版本  
+   现在transcompile的主流是Babel，node.js是为了可以使用babel的环境
+
+2. 开发 web application
+   node.js被开发出来本来的目的就是用于开发可以处理同时大量连接的网络应用  
+
+3. 开发服务端app  
 
 ### 几种服务器
 - Web Server
