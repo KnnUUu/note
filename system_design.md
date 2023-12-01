@@ -73,6 +73,10 @@ https://aws.amazon.com/cn/elasticache/redis-vs-memcached/?nc1=h_ls
   主要处理http请求，表示静态网页    
 - app server  
   也可以处理http但主要是处理app内部协议  
+- batch server  
+  不跟客户端链接，每个一段时间执行特定程序（cron）  
+- socket server  
+  使用websocket实现长时间的链接，用于在有需要时让服务器主动通知客户端   
 - CDN(Content delivery network)  
   用于发送大容量且变化少的资源，比如web网页、视频、游戏内资源  
   为了降低延迟，一般会在各个各个地区or国家设置  
