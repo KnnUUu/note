@@ -13,12 +13,12 @@
 2. 买更多电脑（Horizontal Scaling）
 
 trade-off
-| |Vertical|Horizontal|
+| |Horizontal|Vertical|
 |:-------------:|:-------------:|:-------------:|
 |Load Balancing|need|not need|
 |lost of machine|resilient⭐|single point of failure|
 |IO cost|network calls|inter process communication⭐|
-|data consistency|inconsist|consist⭐| 
+|data consistency（数据传输时的损耗or丢失）|inconsist|consist⭐| 
 |scale well as users increse|no⭐|yes|
 
 Real world development:combine both methods benefits⭐　
