@@ -86,7 +86,10 @@ https://aws.amazon.com/cn/elasticache/redis-vs-memcached/?nc1=h_ls
   用于记录需要持久存在的数据  
   用户不会直接访问，而是app或者web server访问  
   每隔一段时间会备份：master → slave  
-  master用于读写，slave只用于读    
+  master用于读写，slave只用于读  
+  备份的好处：
+  1. 更好性能（Better performance）  
+  2. 可靠（Reliability）：某个数据库坏也可以继续工作
 - cache server  
   记录DB常被访问的数据，减少DB的负荷  
   记录不需要被DB记录的临时数据  
