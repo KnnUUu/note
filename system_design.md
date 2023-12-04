@@ -16,7 +16,7 @@ trade-off
 | |Vertical|Horizontal|
 |:-------------:|:-------------:|:-------------:|
 |Load Balancing|need|not need|
-|lots of machine|resilient⭐|single point of failure|
+|lost of machine|resilient⭐|single point of failure|
 |IO cost|network calls|inter process communication⭐|
 |data consistency|inconsist|consist⭐| 
 |scale well as users increse|no⭐|yes|
