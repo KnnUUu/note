@@ -88,8 +88,11 @@ https://aws.amazon.com/cn/elasticache/redis-vs-memcached/?nc1=h_ls
   每隔一段时间会备份：master → slave  
   master用于读写，slave只用于读  
   备份的好处：
-  1. 更好性能（Better performance）  
+  1. 更好性能（Better performance）    
   2. 可靠（Reliability）：某个数据库坏也可以继续工作
+  
+  如果slave坏了，会损失一点性能但是没影响  
+  如果master坏了，某个slave会变成master  
 - cache server  
   记录DB常被访问的数据，减少DB的负荷  
   记录不需要被DB记录的临时数据  
