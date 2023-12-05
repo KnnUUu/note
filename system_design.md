@@ -97,6 +97,14 @@ https://aws.amazon.com/cn/elasticache/redis-vs-memcached/?nc1=h_ls
   记录DB常被访问的数据，减少DB的负荷  
   记录不需要被DB记录的临时数据  
 
+### session 会话
+指在等于或多余2台的设备间进行的双向的、有时间限制的。通常是有状态的、多余1条信息的  
+由于http协议本身没有状态，所以必须使用额外的存储  
+- 存储在浏览器  
+  也就是常说的cookie  
+- 存储在服务器  
+  存放在数据库里  
+
 ### 常见API架构  
 ![famous_api_architecture](https://github.com/KnnUUu/note/assets/44579350/492002d2-6e3b-4466-9b48-12483a0ca50d)
 
