@@ -123,4 +123,6 @@ producer发出的请求会被存储在mq里，consumer会从mq里取出信息进
 ### 常见API架构  
 ![famous_api_architecture](https://github.com/KnnUUu/note/assets/44579350/492002d2-6e3b-4466-9b48-12483a0ca50d)
 
+websocket：又http升级而来，实现长时间以及双向的链接  
+
 ## 例子
