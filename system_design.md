@@ -117,6 +117,8 @@ producer发出的请求会被存储在mq里，consumer会从mq里取出信息进
 因为Decoupling 解耦，所以使得系统scalable跟resilience  
 ![image](https://github.com/KnnUUu/note/assets/44579350/1def309b-04d3-4aef-9f20-cb41e66a531e)
 
+### Logging, monitoring, metrics, automation tools
+记录日志、监控服务器各项指标（cpu、内存）、CICD  
 
 ### 常见API架构  
 ![famous_api_architecture](https://github.com/KnnUUu/note/assets/44579350/492002d2-6e3b-4466-9b48-12483a0ca50d)
