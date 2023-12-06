@@ -97,6 +97,11 @@ https://aws.amazon.com/cn/elasticache/redis-vs-memcached/?nc1=h_ls
   记录DB常被访问的数据，减少DB的负荷  
   记录不需要被DB记录的临时数据  
 
+### 数据中心 Data center
+也就是一整个系统(除了load balancer)  
+为了使系统更Resilience以及减少不同地区访问延迟  
+可以将一Data center部署在多个地区  
+
 ### session 会话
 指在等于或多余2台的设备间进行的双向的、有时间限制的。通常是有状态的、多余1条信息的  
 由于http协议本身没有状态，所以必须使用额外的存储  
