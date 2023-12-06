@@ -100,6 +100,7 @@ https://aws.amazon.com/cn/elasticache/redis-vs-memcached/?nc1=h_ls
 ### session 会话
 指在等于或多余2台的设备间进行的双向的、有时间限制的。通常是有状态的、多余1条信息的  
 由于http协议本身没有状态，所以必须使用额外的存储  
+会话状态是指服务器与浏览器在会话过程中产生的状态信息  
 - 存储在浏览器  
   也就是常说的cookie  
 - 存储在服务器  
