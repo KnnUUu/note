@@ -1,3 +1,7 @@
+## cheap sheet
+没有`null`只有`None`   
+`True` `False` 头字母大写  
+
 ## symtax  
 `try`:测试一段代码是否出错    
 `except`：出错时的处理  
@@ -46,7 +50,6 @@ s = set()
 a.add(1)
 if 1 in a: print("exist")
 ```
-set.add()
 
 ## 数组 array
 ### 2维数组
