@@ -16,11 +16,12 @@
 - C++ std::unordered_map /std::unordered_set / Python dict() set()
 - 因为自带的hash无法计算一些数据型（比如unordered_set<pair<int, int>>），所以当使用自定义类型时需要另外定义hash函数，面试竞赛时还是用vector吧
 ### Heap
-- Pop(to get min or max) O(1), insert worse O(logN) average O(1), heapify a list O(N) 
-- C++ std::priority_queue / Python heappush(list, value) heappop(list, value) heapify(listy) 
+- 父节点总是比子节点大（or小），所以根节点是最大（or最小）节点  
+- get min or max O(1), insert worse O(logN) average O(1), heapify a list O(N)   
+- C++ std::priority_queue / Python heappush(list, value) heappop(list, value) heapify(listy)   
 - 为什么heapify时间复杂度O(N)  
-  如果建立一个空二叉树然后依次插入的话因为维护每次需要O(logN)所以总共是O(NlogN)  
-  但如果是从后最后一个父节点到根，每次只维护父节点跟左右两个子节点的话，就可以用O(N)完成  
+  如果建立一个空二叉树然后依次插入的话因为维护每次需要O(logN)所以总共是O(NlogN)    
+  如果是按照默认顺序生成二叉树，然后由底层向高层遍历维护heap的话就只需要O(N)  
 ### List
 - Random access, append O(1), insert O(N)  
 - C++ std::vector/ Python list  
