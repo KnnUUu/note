@@ -2,6 +2,14 @@
 没有`null`只有`None`   
 `True` `False` 头字母大写  
 
+## OOP
+```python
+class Dog:
+    kind = 'canine'         # class variable shared by all instances
+    def __init__(self, name):
+        self.name = name    # instance variable unique to each instance
+```
+
 ## symtax  
 `try`:测试一段代码是否出错    
 `except`：出错时的处理  
