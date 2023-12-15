@@ -9,8 +9,8 @@
 
 ### Horizontal vs. Vertical Scaling
 应对更多请求的方法，也就是scalability（可扩展性）  
-1. 买台更大的电脑（Vertical Scaling）   
-2. 买更多电脑（Horizontal Scaling）
+1. 买台更大的电脑（Vertical Scaling or scale up）   
+2. 买更多电脑（Horizontal Scaling or scale out）
 
 trade-off
 | |Horizontal|Vertical|
@@ -44,6 +44,32 @@ expansion
 
 High level design:服务器怎么布置，请求跟回复流向  
 Low level design:具体需要什么class，什么数据结构    
+
+###  What is a MICROSERVICE ARCHITECTURE and what are its advantages?   
+Monolith VS Microservices  
+- Monolith
+  将服务放于较大的机器上，Monolith也可以横向拓展不一定只能有一台
+  好处  
+  1. 适合小团队  
+  2. 相对简单  
+  3. 代码无需多次测试  
+  4. 更快（procedure call）
+
+  坏处  
+  1. 理解整个系统并作以修改比较难   
+  2. 各个部分的耦合造成开发困难  
+  3. 容易造成单点故障  
+
+- Microservices
+  将服务尽可能分割  
+  好处  
+  1. 易于拓展  
+  2. 适合团队合作开发，开发者不需要理解系统里每个功能  
+  3. 易于并行开发，不用等待A功能开发完了才能开发B功（只要不是依附关系）
+  4. 容易检测与理解
+
+  坏处   
+  1. 不容易设计  
 
 ### What is a MESSAGE QUEUE and Where is it used?   
 用户向服务器发送请求时，服务器会把需要做的事情放入列表然后回复用户收到请求，在任务完成后再次联系并发送处理结果，使得不需要一直占用用户（异步处理asynchronous processing）  
