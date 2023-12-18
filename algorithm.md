@@ -6,7 +6,7 @@
 ### Tree
 - 有序
 - search，insert, erase O(Log n)   
-- C++ std::map / Python OrderedDict()  
+- C++ std::map / ~Python OrderedDict()~ OrderedDict只是记录插入顺序而无法按照键或者值排序    
 - 底层 red-black trees  
 ### Hash
 - 无序  
