@@ -80,6 +80,57 @@ arr = [[0 for i in range(cols)] for j in range(rows)]
 ```
 https://www.geeksforgeeks.org/python-using-2d-arrays-lists-the-right-way/  
 
+### stack
+可以用普通list跟append和pop实现   
+```python
+stack = []
+stack.append(1) # [1]
+stack.append(2) # [1, 2]
+stack.append(3) # [1, 2, 3]
+
+stack.pop() # [1, 2]  
+stack.pop() # [1]
+stack.pop() # []
+```
+双向队列与pop()  
+```python
+from collections import deque
+
+dq = deque()
+dq.append(1) # [1]
+dq.append(2) # [1, 2]
+dq.append(3) # [1, 2, 3]
+
+dq.pop() # [1, 2]  
+dq.pop() # [1]
+dq.pop() # []
+```
+## 队列 queue
+跟stack类似，但是用pop(0)  
+```python
+queue = []
+queue.append(1) # [1]
+queue.append(2) # [1, 2]
+queue.append(3) # [1, 2, 3]
+
+queue.pop(0) # [2, 3]  
+queue.pop(0) # [3]
+queue.pop(0) # []
+```
+双向队列与popleft()  
+```python
+from collections import deque
+
+dq = deque()
+dq.append(1) # [1]
+dq.append(2) # [1, 2]
+dq.append(3) # [1, 2, 3]
+
+dq.popleft() # [2, 3]  
+dq.popleft() # [3]
+dq.popleft() # []
+```
+
 ## 字符串 string
 ### 正则表达
 - `(...)`
