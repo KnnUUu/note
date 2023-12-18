@@ -131,6 +131,21 @@ dq.popleft() # [3]
 dq.popleft() # []
 ```
 
+## heap
+```python
+import heapq
+h = [1,3,5,7,9,2,4,6,8,0]
+heapq.heapify(h)
+for i in range(len(h)):
+    print(heapq.heappop(h)) # 1 2 3 4 5 6 7 8 9
+
+x = []
+for i in [1,3,5,7,9,2,4,6,8,0]:
+    heapq.heappush(x,i)
+while len(x) > 0:
+    print(heapq.heappop(x)) # 1 2 3 4 5 6 7 8 9
+```
+
 ## 字符串 string
 ### 正则表达
 - `(...)`
