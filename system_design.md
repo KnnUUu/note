@@ -71,6 +71,23 @@ Monolith VS Microservices
   坏处   
   1. 不容易设计  
 
+###  What is DATABASE SHARDING?  
+- 水平切分（horizontal partitioning）  
+  将列表里的行分割，每个分区都有相同的模式与列但是不同的行   
+- 垂直切分（vertical partitioning）  
+  列被分离出来，并放入新的不同的表中  
+
+要求  
+- consistency 数据一致性  
+- availability 服务器不宕机数据可读
+  使用master-slave构造   
+
+问题  
+1. joins  
+   当读取来自不同分区的数据，需要将他们合并，因为会很慢  
+2. FIXED NUMBER OF SHARDS  
+   分区后添加或者减少DB不自由，所以需要consist hashing     
+
 ### What is a MESSAGE QUEUE and Where is it used?   
 用户向服务器发送请求时，服务器会把需要做的事情放入列表然后回复用户收到请求，在任务完成后再次联系并发送处理结果，使得不需要一直占用用户（异步处理asynchronous processing）  
 Fault tolerance: 某一台服务器宕机时，虽然无法继续接受请求，但可以把已经接收到的请求发送给其他服务器处理。因为不可能宕机后再发送出去，所以必须先保存再DB  
