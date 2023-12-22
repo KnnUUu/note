@@ -94,6 +94,18 @@ Fault tolerance: 某一台服务器宕机时，虽然无法继续接受请求，
 MESSAGE QUEUE：每隔一段时间给处理服务器发送请求监测是否宕机，如果宕机会把任务发送给其他服务器。有load balancing功能。QUEUE会记录各个任务完成状态  
 实际例子：Rabbit MQ、Zero MQ、JMS  
 
+### Introduction to NoSQL databases
+好处  
+1. easily insertion and retrievals  
+2. schema is easily change    
+3. build for scale(horizonal sharding)  
+4. build for aggregation   
+
+坏处  
+1. not build for update(no ACID)  
+2. Read time are comparatively slower   
+3. relation are not implicit  
+4. join are hard  
 ### AWS
 - EC2(Elastic Compute Cloud)  
   在aws上构建的虚拟服务器，类似本地服务器  
