@@ -90,7 +90,26 @@ Peek QPS = 2 * QPS
   - storage  
   - cache
   - number of servers
- 
+
+## CHAPTER 3: A FRAMEWORK FOR SYSTEM DESIGN INTERVIEWS
+不止考察设计分布式系统的能力，也考察沟通能力  
+1. Understand the problem and establish design scope
+   问问题搞清楚需求再回答  
+   有可能直接告诉你也有可能让你自己推断，后者的话记得写下你的假设  
+   问题例子  
+   - What specific features are we going to build?  
+   - How many users does the product have?    
+   - How fast does the company anticipate to scale up? What are the anticipated scales in 3 months, 6 months, and a year?  
+   - What is the company’s technology stack? What existing services you might leverage to simplify the design?  
+   - Is this a mobile app? Or a web app?   
+   - What is the traffic(流量) volume?  
+2. Propose high-level design and get buy-in  
+   - Come up with an initial blueprint for the design  
+   - Draw box diagrams with key components on the whiteboard or paper  
+     clients (mobile/web), APIs, web servers, data stores, cache, CDN, message queue, etc.  
+   - Do back-of-the-envelope calculations  
+---  
+
 ### What is LOAD BALANCING?
 当需要处理大量请求时，一台服务器不足以应对，所以需要设置多台服务器。LOAD BALANCING用于解决客户端应该向哪台服务器发送请求的问题，使得各台服务器的负载均衡  
 当请求增加时，需要增加服务器来应对。移动服务器数据时，应该尽可能保持原有状态，使得原有的缓存可以继续使用，所以需要使用constant hashing  
