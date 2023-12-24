@@ -26,6 +26,7 @@
   布置多个数据中心以满足不同区域用户请求  
 - Message queue  
   实现异步数据交流以实现解耦decouple  
+  比如：RabbitMQ, Kafka  
 - Logging, metrics, automation      
   log记录关键信息   
   metrics 观测服务器性能,运营数据    
@@ -53,6 +54,15 @@ how we scale our system to support millions of users:
 - Split tiers into individual services
 - Monitor your system and use automation tools
 
+## CHAPTER 2: BACK-OF-THE-ENVELOPE ESTIMATION
+### Power of two
+2**10 = 1KB  
+2**20 = 1MB  
+2**30 = 1GB  
+2**40 = 1TB  
+2**50 = 1PB  
+
+2**30 / 2*2**10 = 2**20/2 = 2**19
 
 ### What is LOAD BALANCING?
 当需要处理大量请求时，一台服务器不足以应对，所以需要设置多台服务器。LOAD BALANCING用于解决客户端应该向哪台服务器发送请求的问题，使得各台服务器的负载均衡  
