@@ -105,7 +105,18 @@ MESSAGE QUEUE：每隔一段时间给处理服务器发送请求监测是否宕�
 1. not build for update(no ACID)  
 2. Read time are comparatively slower   
 3. relation are not implicit  
-4. join are hard  
+4. join are hard
+
+种类  
+1. key-value  
+   redis / DynanoDB  
+2. Document  
+   MongoDB(文件被以类似json的形式储存 bson - binary encoded Javascript Object Notation)  
+3. Graph  
+   Neo4j / Giraph  
+4. Wild-Column     
+   Cassandra / HBase  
+
 ### AWS
 - EC2(Elastic Compute Cloud)  
   在aws上构建的虚拟服务器，类似本地服务器  
