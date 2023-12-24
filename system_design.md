@@ -64,6 +64,33 @@ how we scale our system to support millions of users:
 
 2**30 / 2*2**10 = 2**20/2 = 2**19
 
+### Latency numbers
+![image](https://github.com/KnnUUu/note/assets/44579350/cd8a9006-3056-4509-b3b1-4f82ca960082)
+
+1 ns = 10^-9 seconds  
+1 μs= 10^-6 seconds = 1,000 ns  
+1 ms = 10^-3 seconds = 1,000 μs = 1,000,000 ns  
+
+### Availability numbers
+![image](https://github.com/KnnUUu/note/assets/44579350/f9b3027c-5586-4d9b-9334-a3b712f581f3)
+
+### 计算
+Query per second (QPS) = 每日活跃用户 * 每日发送请求数量 / 24小时 / 60分钟 / 60秒  
+Peek QPS = 2 * QPS  
+
+### Tips
+- Rounding and Approximation  
+  没有必要精确到小数点后几位，大致数据就可以了   
+- Write down your assumptions  
+- Label your units
+  不要忘记数据的单位
+- Commonly asked back-of-the-envelope estimations
+  - QPS  
+  - peak QPS  
+  - storage  
+  - cache
+  - number of servers
+ 
 ### What is LOAD BALANCING?
 当需要处理大量请求时，一台服务器不足以应对，所以需要设置多台服务器。LOAD BALANCING用于解决客户端应该向哪台服务器发送请求的问题，使得各台服务器的负载均衡  
 当请求增加时，需要增加服务器来应对。移动服务器数据时，应该尽可能保持原有状态，使得原有的缓存可以继续使用，所以需要使用constant hashing  
