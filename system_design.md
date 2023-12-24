@@ -1,3 +1,59 @@
+# System Design Interview An Insider’s Guide  
+## CHAPTER 1: SCALE FROM ZERO TO MILLIONS OF USERS  
+- 原始状态  
+  所有服务数据都在服务器上，只有客户端/服务器/DNS  
+  网络应用 - 后端语言(Java, Python, etc.)加前端语言(HTML and JavaScript)   
+  app - 基于http获取json    
+
+- DB  
+  将网络层(web tier)和数据层(data tier)分开  
+  关系型数据库与NoSql  
+  - 什么时候用NoSql？  
+    需要超低延迟  
+    数据没有整理  
+    只需要序列化反序列化数据  
+    需要存储大量数据  
+
+- Scaling 服务器拓展 + Load Balancer  
+  Vertical scaling vs horizontal scaling  
+  
+- Database replication  
+- Cache  
+- CDN  
+- Stateless web tier  
+  把会话信息存放在数据库里使得服务器容易拓展  
+- Data centers                
+  布置多个数据中心以满足不同区域用户请求  
+- Message queue  
+  实现异步数据交流以实现解耦decouple  
+- Logging, metrics, automation      
+  log记录关键信息   
+  metrics 观测服务器性能,运营数据    
+  automation 自动化比如CICD  
+- Database scaling 数据库拓展  
+  - Vertical scaling  
+    更好性能服务器  
+  - Horizontal scaling  
+    将数据分割并存储与不同DB上  
+    问题  
+    - Resharding data  
+      某个DB满了  
+    - Celebrity problem  
+      某些数据比其他数据更频繁被访问（比如社交网络的名人账号）所以需要平均存放  
+    - Join and de-normalization  
+      需要一次性取出来自不同服务器的数据  
+    
+how we scale our system to support millions of users:  
+- Keep web tier stateless
+- Build redundancy at every tier
+- Cache data as much as you can
+- Support multiple data centers
+- Host static assets in CDN
+- Scale your data tier by sharding
+- Split tiers into individual services
+- Monitor your system and use automation tools
+
+
 ### What is LOAD BALANCING?
 当需要处理大量请求时，一台服务器不足以应对，所以需要设置多台服务器。LOAD BALANCING用于解决客户端应该向哪台服务器发送请求的问题，使得各台服务器的负载均衡  
 当请求增加时，需要增加服务器来应对。移动服务器数据时，应该尽可能保持原有状态，使得原有的缓存可以继续使用，所以需要使用constant hashing  
