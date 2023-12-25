@@ -116,6 +116,70 @@ Peek QPS = 2 * QPS
    - 运营问题  
    - 如何服务更多的用户  
    
+## CHAPTER 4: DESIGN A RATE LIMITER
+rate limiter is used to control the rate of traffic sent by a client or a service  
+### 有什么用？  
+- 防止DOS和DDOS攻击  
+  DOS(Denial of Service)  单体对单体攻击  
+  DDOS(Distributed Denial of Service) 多体对单体攻击  
+- 降低成本
+  减少服务器
+  减少第三方付费api成本  
+### Understand the problem and establish design scope
+问题  
+- 放在客户端还是服务器上？
+- 根据什么来限流？
+- 系统的量级，给start-up还是大公司用？
+- 是否部署在分布式系统？
+- 做成外部服务还是部署在内部代码上？
+
+需求  
+- 准确限制请求
+- 低延迟
+- 分布式
+- 当被拦截时通知用户
+- 高容错率，rate limiter出现问题也不会影响主服务  
+
+### Propose high-level design and get buy-in
+注意点  
+- 添加服务时需要考虑项目现存技术栈  
+- 自己做耗时耗力但是可以保证全权掌控，使用第三方省时省力  
+- 如果本身已经有api gateway的话可以直接在上面搭建  
+
+算法  
+- Token bucket  
+  ![image](https://github.com/KnnUUu/note/assets/44579350/e28a5e42-23e1-45f4-ac7a-fa4af3bf0ca6)  
+  token按照一定时间增加直到到达token上限   
+  每次处理请求消耗一个token，当剩下0的时候无视请求  
+
+  加入有复数个服务需要限制，则需要复数个bucket  
+  价格每个ip都需要限制，则每个ip都需要一个bucket  
+
+  pro  
+  - 容易部署  
+  - 内存利用率高  
+  - 允许短时间内流量快速增长  
+  con  
+  - 调整 bucket size 和 token refill rate可能比较困难  
+
+- Leaking bucket  
+- Fixed window counter   
+- Sliding window log  
+- Sliding window counter  
+
+计数数据如果放在db就太慢了，这里使用了redis，因为快以及支持超时删除(EXPIRE)的功能    
+
+### Design deep dive  
+- 超过限制时候应该返回HTTP429错误并且附上以下信息  
+  剩下次数、限制次数、多久后可以重新请求  
+- 分布式可能出现的问题  
+  - Race condition  
+    接受第一个请求后在写入新的次数时再接收到第二个请求，会导致计算错误总共只增加了一次  
+    可以考虑加锁，但是会导致变慢  
+  - Synchronization issue  
+    如果存在多个限制器，那么必须将不同限制器之间的数据同步，否则会出现在A限制器明明已经超过限制但却可以访问B限制器的状况  
+    这里给出的解决方案是把不同限制器的数据放在同个redis里面   
+
 ---  
 
 ### What is LOAD BALANCING?
