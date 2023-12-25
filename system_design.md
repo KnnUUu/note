@@ -93,7 +93,7 @@ Peek QPS = 2 * QPS
 
 ## CHAPTER 3: A FRAMEWORK FOR SYSTEM DESIGN INTERVIEWS
 不止考察设计分布式系统的能力，也考察沟通能力  
-1. Understand the problem and establish design scope
+1. Understand the problem and establish design scope: 3 - 10 minutes  
    问问题搞清楚需求再回答  
    有可能直接告诉你也有可能让你自己推断，后者的话记得写下你的假设  
    问题例子  
@@ -103,11 +103,19 @@ Peek QPS = 2 * QPS
    - What is the company’s technology stack? What existing services you might leverage to simplify the design?  
    - Is this a mobile app? Or a web app?   
    - What is the traffic(流量) volume?  
-2. Propose high-level design and get buy-in  
+2. Propose high-level design and get buy-in: 10 - 15 minutes  
    - Come up with an initial blueprint for the design  
    - Draw box diagrams with key components on the whiteboard or paper  
      clients (mobile/web), APIs, web servers, data stores, cache, CDN, message queue, etc.  
    - Do back-of-the-envelope calculations  
+3. Design deep dive: 10 - 25 minutes  
+   增加low-level设计，添加细节  
+4. Wrap up: 3 - 5 minutes  
+   - 分析系统的瓶颈并给出优化方案  
+   - 系统出错时的分析  
+   - 运营问题  
+   - 如何服务更多的用户  
+   
 ---  
 
 ### What is LOAD BALANCING?
