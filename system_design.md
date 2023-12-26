@@ -180,6 +180,23 @@ rate limiter is used to control the rate of traffic sent by a client or a servic
     如果存在多个限制器，那么必须将不同限制器之间的数据同步，否则会出现在A限制器明明已经超过限制但却可以访问B限制器的状况  
     这里给出的解决方案是把不同限制器的数据放在同个redis里面   
 
+## CHAPTER 5: DESIGN CONSISTENT HASHING
+有多个cache服务器时，如果使用普通hash函数做load balancing，在某个服务器宕机的时候，为了修改分配算法几乎需要移动所有的数据  
+一致性哈希就是为了解决此类问题使用的算法，也可以用于数据库分片sharding    
+
+当哈希表调整大小时，k为键总数，n为slot数（这里则是服务器数量），一致性哈希只需要k/n次重新映射，而普通哈希则需要几乎重新映射所有的键值  
+
+- 算法  
+  1. 将服务器跟键都哈希后放在环里  
+  2. 判断哪个键属于哪个服务器，从键的位置往后走，寻找第一个遇到的服务器  
+
+- 问题    
+  1. 因为会追加或者删除服务器，几乎不可能保证各个区间一样大  
+  2. 键与服务器分布不均衡，导致负载不均衡  
+
+- 解决方法 Virtual nodes   
+  将一个真实的服务器复制多个虚拟节点，分布在环上，节点的增加可以降低标准差standard deviation，使得负载均衡  
+
 ---  
 
 ### What is LOAD BALANCING?
