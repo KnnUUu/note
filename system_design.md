@@ -196,6 +196,46 @@ rate limiter is used to control the rate of traffic sent by a client or a servic
 
 - 解决方法 Virtual nodes   
   将一个真实的服务器复制多个虚拟节点，分布在环上，节点的增加可以降低标准差standard deviation，使得负载均衡  
+  Automatic scaling：服务器数量可以根据负载自动调整  
+  Heterogeneity：虚拟节点数量可以根据服务器性能调整，好的服务器可以设置更多节点  
+
+## CHAPTER 6: DESIGN A KEY-VALUE STORE
+NoSql的一种，键越短性能越好（快）  
+常见数据库：Amazon dynamo, Memcached, Redis  
+
+### 单个键值数据库  
+部署简单，使用哈希表即可    
+- 两个优化方法  
+  1. 压缩数据  
+  2. 内存只存放常用的数据，其他放硬盘  
+
+### 分布式键值数据库  
+也称作分布式哈希表  
+- CAP (Consistency, Availability, Partition Tolerance) theorem  
+  对于所有的分布式存储，不可能三角只能保证其中两个  
+  - Consistency  
+    同一时间点不管从哪个数据库取，取得的数据都是一样的  
+  - Availability  
+    任意时间点的请求都可以获得回复哪怕有一部分数据库宕机  
+  - Partition Tolerance  
+    不同服务器之间无法通信的时候，系统也可以继续运行  
+
+  CA牺牲了P，但是由于网络故障不可避免，现实中不存在CA的设计,只能在CA种选一个  
+  CP需要在数据写入到同步为止锁住，银行系统就是使用的CP
+  AP则可以在任意时间点读，但代价是可能读到老旧数据
+
+### 搭建键值数据库用到的技术以及组件
+- Data partition(sharding)  
+  大量的数据无法放在同一个数据库内，所以需要分割成小块放在不同数据库里面  
+  - 问题  
+    1. 如何均衡分割数据  
+    2. 增加或减少节点的时候减少数据迁移的量  
+
+- Data replication
+  防止singal point failure
+  方法依旧是consistent hashing，不同的是会指定一个数字N，在对键哈希后，往后寻找N个服务器复制过去
+  如果使用了Virtual nodes，为了防止最后存储在同一个服务器上，在寻找服务器时会跳过同一个服务器
+
 
 ---  
 
