@@ -231,12 +231,14 @@ NoSql的一种，键越短性能越好（快）
     1. 如何均衡分割数据  
     2. 增加或减少节点的时候减少数据迁移的量  
 
-- Data replication
-  防止singal point failure
-  方法依旧是consistent hashing，不同的是会指定一个数字N，在对键哈希后，往后寻找N个服务器复制过去
-  如果使用了Virtual nodes，为了防止最后存储在同一个服务器上，在寻找服务器时会跳过同一个服务器
+- Data replication  
+  防止singal point failure  
+  方法依旧是consistent hashing，不同的是会指定一个数字N，在对键哈希后，往后寻找N个服务器复制过去  
+  如果使用了Virtual nodes，为了防止最后存储在同一个服务器上，在寻找服务器时会跳过同一个服务器  
 
-
+- Consistency  
+  quorum  
+  
 ---  
 
 ### What is LOAD BALANCING?
