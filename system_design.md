@@ -238,7 +238,51 @@ NoSql的一种，键越短性能越好（快）
 
 - Consistency  
   quorum  
+
+## CHAPTER 15: DESIGN GOOGLE DRIVE
+### Step 1 - Understand the problem and establish design scope
+需求  
+- 需要的功能：上传下载通知  
+- 网络应用与app都要  
+- 支持所有文件格式  
+- 文件需要加密  
+- 文件不能大于10GB  
+- 10M DAU  
+- 同步功能：在某个设备上追加的文件会被同步到其他设备上  
+- 文件版本  
+- 共享文件
+
+隐形需求
+- 可靠，不会出现文件丢失
+- 快速同步
+- 高带宽使用效率
+- 可拓展性
+- 高可用性 availability
   
+API   
+- upload  
+  根据文件大小分为普通上传跟中断后可恢复上传(Resumable)  
+
+  Example API:  
+  - https://api.example.com/files/upload?uploadType=resumable  
+  
+  Params:  
+  - uploadType=resumable  
+  - data: Local file to be uploaded  
+- download  
+  Example API:  
+  - https://api.example.com/files/download  
+  
+  Params:  
+  - path: download file path  
+- Get file revisions  
+  Example API:  
+  - https://api.example.com/files/list_revisions
+  
+  Params:  
+  - path: The path to the file you want to get the revision history.  
+  - limit: The maximum number of revisions to return.
+    
 ---  
 
 ### What is LOAD BALANCING?
