@@ -282,7 +282,26 @@ API
   Params:  
   - path: The path to the file you want to get the revision history.  
   - limit: The maximum number of revisions to return.
-    
+
+High-level  
+![image](https://github.com/KnnUUu/note/assets/44579350/e50a1a02-9f27-4682-ae71-d3b773a61fd3)
+- Block servers  
+  上传云存储前将文件分割成小块  
+  优化：减少流量  
+  - Delta sync  
+    每次文件更新时，不是同步整个文件，而只需要同步出现变化的block  
+  - Compression  
+    在传输前用压缩block
+  分割成block → 压缩 → 加密 → 传输  
+- Cold storage   
+  用于存储长时间不访问的文件  
+- Offline backup queue  
+  用户离线时存放更新，重新上线时同步到服务器  
+- High consistency requirement
+  由于NoSql不支持ACID，这是采用了天然支持ACID的关系型数据库  
+- 协议  
+[Long polling](https://zh.javascript.info/long-polling)
+
 ---  
 
 ### What is LOAD BALANCING?
