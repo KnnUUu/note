@@ -517,3 +517,10 @@ producer发出的请求会被存储在mq里，consumer会从mq里取出信息进
 ![famous_api_architecture](https://github.com/KnnUUu/note/assets/44579350/492002d2-6e3b-4466-9b48-12483a0ca50d)
 
 websocket：又http升级而来，实现长时间以及双向的链接  
+
+# Example
+### large-scale real-time data processing demands of augmented reality applications
+- AR apps often deal with sensitive user data -> encryption and anonymization
+- machine learning algorithms can help predict user behavior and optimize resource allocation
+- edge computing could reduce latency and network congestion
+
