@@ -524,3 +524,7 @@ websocket：又http升级而来，实现长时间以及双向的链接
 - machine learning algorithms can help predict user behavior and optimize resource allocation
 - edge computing could reduce latency and network congestion
 
+### games or applications that heavily rely on location-based services and mapping technologies
+- 提起地图相关技术比如GPS integration、geofencing、map API utilization
+- 尽量减少使用gps的时间因为会导致电量快速下降
+- 考虑链接不到网络或者gps的情况，比如使用机器学习预测用户目前可能在的位置  
