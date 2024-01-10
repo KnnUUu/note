@@ -401,6 +401,26 @@ Fault tolerance: 某一台服务器宕机时，虽然无法继续接受请求，
 MESSAGE QUEUE：每隔一段时间给处理服务器发送请求监测是否宕机，如果宕机会把任务发送给其他服务器。有load balancing功能。QUEUE会记录各个任务完成状态  
 实际例子：Rabbit MQ、Zero MQ、JMS  
 
+### System Design: TINDER as a microservice architecture   
+- 如何存储用户照片？  
+  file vs Blob（binary large object）  
+- 数据库功能  
+  1. mutability 可变性 ❌  
+     修改数据库内数据，这里指的是修改用户上传的图片，但实际上只需要上传一张新的，所以并不需要修改图片的功能  
+  2. transaction ACID  
+     跟上面一样的理由不需要  
+     Atomicity：某一个修改失败的时候，命令无效，数据库会维持在命令发出前的状态  
+     Consistency：事务开始之前和事务结束以后，数据库的完整性没有被破坏。写入的资料必须完全符合所有的预设约束、触发器、级联回滚等  
+     Isolation 隔离：允许多个并发事务同时对其数据进行读写和修改的能力，隔离性可以防止多个事务并发执行时由于交叉执行而导致数据的不一致  
+     Durability 持久性：事务处理结束后，对数据的修改就是永久的，即便系统故障也不会丢失。  
+  3. index
+     图片内部数据是0与1没有意义  
+  4. access control
+- 发送信息
+  http每次请求都要链接并且只是单向的，不适合用于DM功能
+  这里使用XMPP协议  
+
+## others
 ### Introduction to NoSQL databases
 好处  
 1. easily insertion and retrievals  
@@ -497,22 +517,3 @@ producer发出的请求会被存储在mq里，consumer会从mq里取出信息进
 ![famous_api_architecture](https://github.com/KnnUUu/note/assets/44579350/492002d2-6e3b-4466-9b48-12483a0ca50d)
 
 websocket：又http升级而来，实现长时间以及双向的链接  
-
-## System Design: TINDER as a microservice architecture   
-- 如何存储用户照片？  
-  file vs Blob（binary large object）  
-- 数据库功能  
-  1. mutability 可变性 ❌  
-     修改数据库内数据，这里指的是修改用户上传的图片，但实际上只需要上传一张新的，所以并不需要修改图片的功能  
-  2. transaction ACID  
-     跟上面一样的理由不需要  
-     Atomicity：某一个修改失败的时候，命令无效，数据库会维持在命令发出前的状态  
-     Consistency：事务开始之前和事务结束以后，数据库的完整性没有被破坏。写入的资料必须完全符合所有的预设约束、触发器、级联回滚等  
-     Isolation 隔离：允许多个并发事务同时对其数据进行读写和修改的能力，隔离性可以防止多个事务并发执行时由于交叉执行而导致数据的不一致  
-     Durability 持久性：事务处理结束后，对数据的修改就是永久的，即便系统故障也不会丢失。  
-  3. index
-     图片内部数据是0与1没有意义  
-  4. access control
-- 发送信息
-  http每次请求都要链接并且只是单向的，不适合用于DM功能
-  这里使用XMPP协议  
