@@ -304,7 +304,7 @@ High-level
 
 ---  
 
-## Gaurav Sen
+# Gaurav Sen
 ### What is LOAD BALANCING?
 当需要处理大量请求时，一台服务器不足以应对，所以需要设置多台服务器。LOAD BALANCING用于解决客户端应该向哪台服务器发送请求的问题，使得各台服务器的负载均衡  
 当请求增加时，需要增加服务器来应对。移动服务器数据时，应该尽可能保持原有状态，使得原有的缓存可以继续使用，所以需要使用constant hashing  
@@ -420,7 +420,7 @@ MESSAGE QUEUE：每隔一段时间给处理服务器发送请求监测是否宕�
   http每次请求都要链接并且只是单向的，不适合用于DM功能
   这里使用XMPP协议  
 
-## others
+# others
 ### Introduction to NoSQL databases
 好处  
 1. easily insertion and retrievals  
