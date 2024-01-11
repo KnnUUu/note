@@ -525,6 +525,10 @@ websocket：又http升级而来，实现长时间以及双向的链接
 - edge computing could reduce latency and network congestion
 
 ### games or applications that heavily rely on location-based services and mapping technologies
-- 提起地图相关技术比如GPS integration、geofencing、map API utilization
-- 尽量减少使用gps的时间因为会导致电量快速下降
-- 考虑链接不到网络或者gps的情况，比如使用机器学习预测用户目前可能在的位置  
+- 提起地图相关技术比如GPS integration、geofencing、map API utilization  
+  - geofencing  
+    使用GPS、RFID、Wifi、cellular data（蜂窝数据）来生成一个虚拟地理边界，当设备通过屏障抵达另一区域的时候可以出发一个处理比如推送通知、升级数据库  
+    例子：进入其它国家时10086的通知  
+- 尽量减少使用gps的时间因为会导致电量快速下降  
+- 考虑链接不到网络或者gps的情况，比如使用机器学习预测用户目前可能在的位置
+
