@@ -50,23 +50,53 @@
   https://leetcode-cn.com/problems/binary-search/solution/er-fen-cha-zhao-de-xun-huan-bu-bian-liang-zhi-yao-/  
 
 - BFS&DFS  
-  为什么BFS&DFS时间复杂度是O(E+V)？
-  ```python
-  def bfs(visited, graph, node): #function for BFS
-    visited.append(node)
-    queue.append(node)
+  - BFS vs DFS  
+    BFS可以用于寻找最短路径，但是空间复杂度比DFS高  
+    二叉树的情况下，DFS最坏是遍历到最深一层也就是O(logN)，但BDS遍历到最深一层是O(N/2)==O(N)
+  - 寻找最短路径 模板
+    ```python
+    # 计算从起点 start 到终点 target 的最近距离
+    def BFS(Node start, Node target):
+        if root == None:
+            # edge case
+            
+        nodeQueue = []
+        visited = set()
+        visited.add(root)
+        depth = 1
+
+        while len(nodeQueue)>0:
+            queueLen = len(nodeQueue)
+            for i in range(queueLen):            
+                tempNode = nodeQueue.pop(0)
+                if tempNode is target:
+                    return depth
+                for adjNode in tempNode.adj():
+                    if adjNode not in visited:
+                        nodeQueue.append(adjNode)
+                        visited.add(adjNode)
+            depth+=1
+    
+        # target not found
+        error()
+    ```
+  - 为什么BFS&DFS时间复杂度是O(E+V)？
+    ```python
+    def bfs(visited, graph, node): #function for BFS
+      visited.append(node)
+      queue.append(node)
   
-    while queue:          # queue最坏会放进所有顶点所以以下的操作都是执行V次
-      m = queue.pop(0) #V
-      for neighbour in graph[m]:
-        if neighbour not in visited: # 以下处理会执行各个顶点的临边次，这里标记为e(v)
-          visited.append(neighbour)
-          queue.append(neighbour)
-  ```
-  总时间复杂度  
-  = O(V+V*e(v))  
-  = O(V+E)  
-  参考：https://stackoverflow.com/questions/26549140/breadth-first-search-time-complexity-analysis / https://stackoverflow.com/questions/11468621/why-is-the-time-complexity-of-both-dfs-and-bfs-o-v-e   
+      while queue:          # queue最坏会放进所有顶点所以以下的操作都是执行V次
+        m = queue.pop(0) #V
+        for neighbour in graph[m]:
+          if neighbour not in visited: # 以下处理会执行各个顶点的临边次，这里标记为e(v)
+            visited.append(neighbour)
+            queue.append(neighbour)
+    ```
+    总时间复杂度  
+    = O(V+V*e(v))  
+    = O(V+E)  
+    参考：https://stackoverflow.com/questions/26549140/breadth-first-search-time-complexity-analysis / https://stackoverflow.com/questions/11468621/why-is-the-time-complexity-of-both-dfs-and-bfs-o-v-e   
 
 - 回溯（huísù）法 BackTracking  
   Backtracking is an improvement to the brute force approach.  
