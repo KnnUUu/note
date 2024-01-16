@@ -10,7 +10,7 @@ class Dog:
         self.name = name    # instance variable unique to each instance
 ```
 
-## symtax  
+## syntax  
 `try`:测试一段代码是否出错    
 `except`：出错时的处理  
 `else`：没出错时的处理  
