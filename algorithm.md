@@ -123,6 +123,41 @@ def bfs(visited, graph, node): #function for BFS
   将二位数组扁平化，作为字符串保存  
   上下左右四个cell便是邻接点  
 
+## 花式遍历
+发散思维，尝试翻转、镜像等获得思路  
+
+### 例子
+- 原地反转所有单词的顺序    
+  输入：`s = "hello world labuladong"`  
+  输出：`s = "labuladong world hello"`  
+  解法：先反转整个字符串，再按照各个单词反转回来  
+
+- 旋转矩阵  
+  输入  
+  ```
+  [[1,2,3],
+  [4,5,6],
+  [7,8,9]]
+  ```
+  输出  
+  ```
+  [[7,4,1],
+  [8,5,2],
+  [9,6,3]]
+  ```
+  思路：旋转二维矩阵的难点在于将「行」变成「列」，将「列」变成「行」，而只有按照对角线的对称操作是可以轻松完成这一点  
+  解法：先按照对角线对称一下（也就是xy互换），然后在中间对称一下
+
+- 矩阵的螺旋遍历  
+  输入  
+  ```
+  [[1,2,3],
+  [4,5,6],
+  [7,8,9]]
+  ```
+  输出：`[1,2,3,4,5,6,7,8,9]`  
+  解法：有上下左右四个边界，每次遍历完一行或者一列将对应的边界缩小一层，沿着边界遍历即可  
+  
 ## 回溯（huísù）法 BackTracking  
 Backtracking is an improvement to the brute force approach.  
 removing those solutions that fail to satisfy the constraints of the problem at any point in time  
