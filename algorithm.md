@@ -47,7 +47,25 @@
 
 - 二分查找  
   二分查找边界条件  
-  https://leetcode-cn.com/problems/binary-search/solution/er-fen-cha-zhao-de-xun-huan-bu-bian-liang-zhi-yao-/  
+  https://leetcode-cn.com/problems/binary-search/solution/er-fen-cha-zhao-de-xun-huan-bu-bian-liang-zhi-yao-/
+  ```python
+  # 查找左侧边界
+  def leftBound(nums, target):
+      l = 0, r = len(nums)-1
+      while l<=r:
+          mid = l+(r-l)//2 # 如果两个int都很大相加则可能溢出所以使用这种写法
+          if nums[mid] >= target:
+              r = mid - 1
+          else: #nums[mid] < target
+              l = mid + 1
+      
+      if l<0 or l>=len(nums) or nums[l]!=target:
+          # target not found
+          return -1
+      else:
+          # 循环中止条件是r+1==l，此时l指向左边边界
+          return nums[l]
+  ```
 
 - BFS&DFS  
   - BFS vs DFS  
