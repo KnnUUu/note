@@ -79,7 +79,15 @@ print(arr, "after")
 arr = [[0 for i in range(cols)] for j in range(rows)]
 ```
 https://www.geeksforgeeks.org/python-using-2d-arrays-lists-the-right-way/  
+### flatten
+```python
+# numpy方法
+import numpy as np
+np.array([[1,2,3],[4,5,6],[7,8,9]]).flatten()  #=> array([1, 2, 3, 4, 5, 6, 7, 8, 9])
 
+# sum
+sum([[1,2,3],[4,5,6],[7,8,9]], [])  #=> [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
 ### stack
 可以用普通list跟append和pop实现   
 ```python
