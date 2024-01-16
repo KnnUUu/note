@@ -57,6 +57,8 @@ negative_infinity = -math.inf
 s = set()
 a.add(1)
 if 1 in a: print("exist")
+a.remove(1)
+if 1 in a: print("exist")
 ```
 
 ## 数组 array
