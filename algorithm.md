@@ -99,6 +99,11 @@
     = O(V+E)  
     参考：https://stackoverflow.com/questions/26549140/breadth-first-search-time-complexity-analysis / https://stackoverflow.com/questions/11468621/why-is-the-time-complexity-of-both-dfs-and-bfs-o-v-e   
 
+  - 滑动拼图  
+    https://leetcode.com/problems/sliding-puzzle/description/  
+    将二位数组扁平化，作为字符串保存  
+    上下左右四个cell便是邻接点  
+
 - 回溯（huísù）法 BackTracking  
   Backtracking is an improvement to the brute force approach.  
   removing those solutions that fail to satisfy the constraints of the problem at any point in time  
