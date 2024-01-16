@@ -54,11 +54,11 @@ negative_infinity = -math.inf
 ## hash
 ### set
 ```python
-s = set()
+a = set()
 a.add(1)
-if 1 in a: print("exist")
+print("exist") if 1 in a else  print("not exist")
 a.remove(1)
-if 1 in a: print("exist")
+print("exist") if 1 in a else  print("not exist")
 ```
 
 ## 数组 array
