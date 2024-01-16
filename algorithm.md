@@ -159,10 +159,63 @@ def bfs(visited, graph, node): #function for BFS
   解法：有上下左右四个边界，每次遍历完一行或者一列将对应的边界缩小一层，沿着边界遍历即可  
   
 ## 回溯（huísù）法 BackTracking  
-Backtracking is an improvement to the brute force approach.  
-removing those solutions that fail to satisfy the constraints of the problem at any point in time  
-Backtracking can be defined as a general algorithmic technique that considers searching every possible combination in order to solve a computational problem.  
+本质是是遍历一棵决策树，每个叶子节点存放着一个合法答案，遍历所有叶子节点就能收集所有的合法答案  
+```
+result = []
+def backtrack(路径, 选择列表):
+    if 满足结束条件:
+        result.add(路径)
+        return
+    
+    for 选择 in 选择列表:
+        做选择
+        backtrack(路径, 选择列表)
+        撤销选择
+```
+### 例子
+```java
+class Solution {
+    List<List<Integer>> res = new LinkedList<>();
 
+    /* 主函数，输入一组不重复的数字，返回它们的全排列 */
+    List<List<Integer>> permute(int[] nums) {
+        // 记录「路径」
+        LinkedList<Integer> track = new LinkedList<>();
+        // 「路径」中的元素会被标记为 true，避免重复使用
+        boolean[] used = new boolean[nums.length];
+        
+        backtrack(nums, track, used);
+        return res;
+    }
+
+    // 路径：记录在 track 中
+    // 选择列表：nums 中不存在于 track 的那些元素（used[i] 为 false）
+    // 结束条件：nums 中的元素全都在 track 中出现
+    void backtrack(int[] nums, LinkedList<Integer> track, boolean[] used) {
+        // 触发结束条件
+        if (track.size() == nums.length) {
+            res.add(new LinkedList(track));
+            return;
+        }
+        
+        for (int i = 0; i < nums.length; i++) {
+            // 排除不合法的选择
+            if (used[i]) {
+                // nums[i] 已经在 track 中，跳过
+                continue;
+            }
+            // 做选择
+            track.add(nums[i]);
+            used[i] = true;
+            // 进入下一层决策树
+            backtrack(nums, track, used);
+            // 取消选择
+            track.removeLast();
+            used[i] = false;
+        }
+    }
+}
+```
 ## KMP算法  
 用于字符串匹配：字符串 P 是否为字符串 S 的子串？如果是，它出现在 S 的哪些位置？  
 
