@@ -2,6 +2,19 @@
 - 没有`null`只有`None`   
 - `True` `False` 头字母大写  
 
+## 函数
+### 值传递 or 引用传递
+> arguments are passed by assignment in Python. Since assignment just creates references to objects, there’s no alias between an argument name in the caller and callee, and so no call-by-reference per Se
+
+人话解释：如果函数收到的是一个可变对象的引用，就能修改对象的原始值——相当于传址。如果函数收到的是一个不可变对象的引用（其实也是对象地址！！！），就不能直接修改原始对象——相当于传值。  
+可变对象：list / dict / set
+- Immutable Objects  
+  can’t be changed after it is created  
+  `int`, `float`, `bool`, `string`, `Unicode`, `tuple`  
+- Mutable Objects  
+  Custom classes are generally mutable  
+  `list`, `dict`, `set`  
+
 ## OOP
 ```python
 class Dog:
