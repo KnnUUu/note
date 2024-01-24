@@ -64,7 +64,19 @@ import math
 positive_infinity = math.inf
 negative_infinity = -math.inf
 ```
+### float
+```python
+>>> print('{:,}'.format(1000000)) #每3位插入,
+1,000,000
 
+>>> print('{:.4f}'.format(3.14)) #小数点以下4位
+3.1400
+
+>>> print('{:.2g}'.format(1234567)) #表示2位数字
+1.2e+06
+>>> print('{:.10g}'.format(0.1234567)) #超过本身长度的话则不会有变化
+0.1234567
+```
 ## hash
 ### set
 ```python
