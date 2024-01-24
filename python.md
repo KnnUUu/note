@@ -191,6 +191,10 @@ ame
 
 >>> print(r'C:\some\name')  # note the r before the quote
 C:\some\name
+
+>>> s = 'C:\some\name'
+>>> print(repr(s)) # 转化变量写法
+C:\some\name
 ```
 https://docs.python.org/3/tutorial/introduction.html#strings  
 
