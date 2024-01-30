@@ -32,3 +32,7 @@ NULL  == false
 false === 0
 NULL  === false
 ```
+## 作用域 scope 
+### foreach
+https://stackoverflow.com/questions/47128069/why-do-i-need-unset-value-after-foreach-loop  
+在foreach中传递引用时，foreach结束后最后unset  
