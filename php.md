@@ -15,10 +15,24 @@ echo "variable $x ";
 echo "variable ${x}";  
 echo "variable {$x}";  
 ```
+## 函数 类
+### 使用字符串调用函数
+```php
+class Foo
+{
+    public function func()
+    {
+        echo "func";
+    }
+}
+$f = new Foo();
+[$f, "func"](); // call func of $f
+```
 ### self vs this  
 this是在实例化的时候来确定指向谁。 所以说，this就是指向当前对象实例的指针，不指向任何其他对象或类。  
 self是指向类本身，也就是self是不指向任何已经实例化的对象，一般self使用来指向类中的静态变量。  
-### 判定式
+
+## 判定式
 `==`与`!=`不考虑数据类型  
 `===`与`!==`考虑数据类型    
 ```php
