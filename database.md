@@ -81,6 +81,22 @@
   ORDER BY column_name
   ORDER BY column_name DESC
   ```
+- join
+  ```sql
+  SELECT table1.column1, table2.column2, ...
+  FROM table1
+  XXX JOIN table2 ON condition;
+  ```
+  - Inner Join  
+    查找两个表同时存在的行  
+  - Left Join / Right Join  
+    返回左（右）表里所有的数据，如果右（左）表也有同样的数据则会一起返回。
+  - Full Join  
+    返回两个表所有记录，关联起来的数据会合并到一起  
+  - Left / Right Join Excluding Inner Join  
+    返回左（右）表有但是右（左）表没有的数据  
+  - Full Outer Join Excluding Inner Join  
+    返回两个表不关联的数据      
 ### 性能优化
 1. 连接配置优化  
    1. 服务端配置  
