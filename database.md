@@ -68,7 +68,19 @@
   FROM Custome
   GROUP BY gender, age
   ```
-
+- 获取字符串长度
+  ```sql
+  LENGTH(name_of_string)
+  ```
+- 重命名col
+  ```sql
+  SELECT old_name FROM database_name WHERE XXX as new_name
+  ```
+- 升降序排列
+  ```sql
+  ORDER BY column_name
+  ORDER BY column_name DESC
+  ```
 ### 性能优化
 1. 连接配置优化  
    1. 服务端配置  
