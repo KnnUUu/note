@@ -68,6 +68,11 @@
   FROM Custome
   GROUP BY gender, age
   ```
+  一般情况下使用where筛选数据，但group by时候则使用having
+  ```sql
+  GROUP BY group_condition
+  HAVING having _condition
+  ```
 - 获取字符串长度
   ```sql
   LENGTH(name_of_string)
