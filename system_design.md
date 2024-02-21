@@ -239,6 +239,30 @@ NoSql的一种，键越短性能越好（快）
 - Consistency  
   quorum  
 
+## CHAPTER 7: DESIGN A UNIQUE ID GENERATOR IN DISTRIBUTED SYSTEMS
+本来使用数据库自带的auto_increment就可以生成不重复的ID，但是在分布式系统里不行，因为单个服务器不够大并且生成在多个服务期间生成独特的ID很难做到低延迟  
+
+### 需求
+- ID必须unique  
+- ID只能是数字
+- ID最大64位
+- ID按照日期排列
+- 系统需要每秒生成10000个ID  
+
+### 解决方案
+- Multi-master replication
+  使用数据库的auto_increment，但是每次不是增加1而是k，k为服务器数量  
+  ```
+  服务器1：1、3、5  
+  服务器2：2、4、6
+  ```
+  缺点    
+  - 难以在多个数据中心实现   
+  - ID不一定按照时间序增加  
+  - 难以应对服务器增加或减少的状况
+
+- UUID
+    
 ## CHAPTER 15: DESIGN GOOGLE DRIVE
 ### Step 1 - Understand the problem and establish design scope
 需求  
