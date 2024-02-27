@@ -287,6 +287,24 @@ NoSql的一种，键越短性能越好（快）
   - Sequence number  
     自增值，每毫秒会重置回0  
 
+## CHAPTER 8: DESIGN A URL SHORTENER
+一种将长URL映射到短URL的功能，或者点击短URL时自动转换回长URL    
+例  
+  input： https://www.systeminterview.com/q=chatsystem&c=loggedin&v=v3&l=long is the original
+  output：https://tinyurl.com/y7keocwj
+### 需求
+- 每天产出100,000,000个网址  
+- 尽可能短  
+- 允许使用字母（a-Z）跟数字  
+- 生成后的网址不会更新或者删除  
+### 计算
+- Write operation: 100 million URLs are generated per day.
+- Write operation per second: 100 million / 24 /3600 = 1160
+- Read operation: Assuming ratio of read operation to write operation is 10:1, read operation per second: 1160 * 10 = 11,600
+- Assuming the URL shortener service will run for 10 years, this means we must support 100 million * 365 * 10 = 365 billion records.
+- Assume average URL length is 100.
+- Storage requirement over 10 years: 365 billion * 100 bytes * 10 years = 365 TB
+
 ## CHAPTER 15: DESIGN GOOGLE DRIVE
 ### Step 1 - Understand the problem and establish design scope
 需求  
