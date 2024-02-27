@@ -261,8 +261,11 @@ NoSql的一种，键越短性能越好（快）
   - ID不一定按照时间序增加  
   - 难以应对服务器增加或减少的状况
 
-- UUID
-    
+- UUID (Universally Unique Identifier 唯一识别码)
+  由一组32位数的16进制数字所构成  
+  使用是让作用是让分布式系统中的所有元素都能有唯一的辨识信息，而不需要通过中央控制端来做辨识信息的指定，每台设备都可以创建不与其它人冲突的UUID  
+  缺陷是会比较长  
+
 ## CHAPTER 15: DESIGN GOOGLE DRIVE
 ### Step 1 - Understand the problem and establish design scope
 需求  
