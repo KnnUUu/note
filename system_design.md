@@ -541,7 +541,17 @@ https://aws.amazon.com/cn/elasticache/redis-vs-memcached/?nc1=h_ls
   用于发送大容量且变化少的资源，比如web网页、视频、游戏内资源  
   为了降低延迟，一般会在各个各个地区or国家设置  
 - load balancer  
-  将客服端的请求平均分配给各个服务器分散避免拥堵  
+  将客服端的请求平均分配给各个服务器分散避免拥堵
+  - L4 vs L7 load balancer  
+    L4指的是OSI第四层transport layer  
+    L7指的是OSI第七层application layer  
+    |  | L4 load balancer | L7 load balancer |
+    | :-----: | :----: | :----: |
+    | 处理的OSI层数 | transport layer | application layer |
+    | 分配方法 | IP与port | URL、Cookie、HTTP header |
+    | 内容 | 纯粹的负载均衡 | 高度负载均衡以及安全功能 |
+    | cost | low | high |
+    | 对应协议 | TCP/UDP | HTTP/HTTPS |
 - database server  
   用于记录需要持久存在的数据  
   用户不会直接访问，而是app或者web server访问  
