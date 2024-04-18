@@ -1,5 +1,6 @@
 ## cheat sheet
-- 没有`null`只有`None`   
+- 没有`null`只有`None`
+- 没有`this`只有`self`
 - `True` `False` 头字母大写  
 
 ## 函数
@@ -245,4 +246,12 @@ Jello, World!
 
 >>> print(a[:4]+"a"+a[5:]) # 修改一部分字符,直接给a[4]赋值会出错.
 Helao, World!
+```
+
+### Unicode转换
+```python
+>>> ord("a")
+97
+>>> chr(97)
+‘a’
 ```
