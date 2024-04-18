@@ -210,7 +210,7 @@ C:\some\name
 ```
 https://docs.python.org/3/tutorial/introduction.html#strings  
 
-### 排序
+### 按字母表顺序排序
 用sorted会变成list，所以要用join再连接起来
 ```python
 >>> print(' and '.join(["apple","orange","banana"]))
