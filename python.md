@@ -222,3 +222,27 @@ apple and orange and banana
 >>> print(''.join(sorted("apple")))
 aelpp
 ```
+
+### 修改字符串
+```python
+>>> a = "Hello, World!"
+
+>>> print(a.upper())
+HELLO, WORLD!
+
+>>> print(a.lower())
+hello, world!
+
+>>> b = "H e l l o , W o r l d !"
+>>> print(b.strip()) # 去除头尾空格
+Hello, World!
+
+>>> print(a.replace("H", "J")) 
+Jello, World!
+
+>>> print(a.split(","))
+[' Hello', ' World! ']
+
+>>> print(a[:4]+"a"+a[5:]) # 修改一部分字符,直接给a[4]赋值会出错.
+Helao, World!
+```
