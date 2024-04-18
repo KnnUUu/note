@@ -1,4 +1,4 @@
-## cheap sheet
+## cheat sheet
 - 没有`null`只有`None`   
 - `True` `False` 头字母大写  
 
