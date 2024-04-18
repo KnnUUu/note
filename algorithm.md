@@ -18,7 +18,7 @@
 ## Heap
 - 父节点总是比子节点大（or小），所以根节点是最大（or最小）节点  
 - get min or max O(1), insert worse O(logN) average O(1), heapify a list O(N)   
-- C++ std::priority_queue / Python heappush(list, value) heappop(list, value) heapify(list)   
+- C++ std::priority_queue / Python heappush(list, value) heappop(list, value) heapify(list) python只有min heap（根节点最小），需要max heap的时候可以把所有值都变负  
 - 为什么heapify时间复杂度O(N)  
   如果建立一个空二叉树然后依次插入的话因为维护每次需要O(logN)所以总共是O(NlogN)    
   如果是按照默认顺序生成二叉树，然后由底层向高层遍历维护heap的话就只需要O(N)  
