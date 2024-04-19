@@ -234,9 +234,9 @@ HELLO, WORLD!
 >>> print(a.lower())
 hello, world!
 
->>> b = "H e l l o , W o r l d !"
+>>> b = " H e l l o , W o r l d !"
 >>> print(b.strip()) # 去除头尾空格
-Hello, World!
+H e l l o , W o r l d !
 
 >>> print(a.replace("H", "J")) 
 Jello, World!
