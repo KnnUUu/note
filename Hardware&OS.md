@@ -25,6 +25,8 @@
     Boost/Turbo Clock Speed: The maximum speed the CPU can achieve under load. Can cause over heat and shorter life span  
   - L1, L2, and L3 Cache  
     small amounts of very fast memory located on the CPU
+  - TDP (Thermal Design Power)
+    Measured in watts, this indicates the amount of heat the CPU generates and how much cooling is required.  
 
 ### Concurrency computation 并发 & Parallel computation 并行  
 concurrency ：再复数个任务之前快速切换执行  
