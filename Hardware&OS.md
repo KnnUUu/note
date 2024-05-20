@@ -34,6 +34,11 @@
 - For Server: Linux  
 与unix关系？  
 
+## Virtual Machine (VM)
+a compute resource that uses software instead of a physical computer to run programs and deploy apps. One or more virtual “guest” machines run on a physical “host” machine.  Each virtual machine runs its own operating system and functions separately from the other VMs, even when they are all running on the same host.   
+Common VM: VMware, VirtualBox, Hyper-V  
+
+
 ### Concurrency computation 并发 & Parallel computation 并行  
 concurrency ：再复数个任务之前快速切换执行  
 Parallelism: 同时执行复数个任务  
