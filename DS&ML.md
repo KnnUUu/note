@@ -18,3 +18,24 @@ Market Basket Analysis
 - amount of parameters in model is very high  
 - Developed in transformer architecture, before transformer RNN(Recurrent neural network) was the main stream, them LSTM         
 - Example: Chatgpt, Bart  
+
+## Deep Learning
+Standardization: make mean of values is 0 and the standard deviation is 1  
+Normalization: make data distribution  
+
+Training set: for training  
+Validation set: calculate loss and optimise model  
+Test set: estimate and analysis mdoel  
+
+- Supervised learning  
+  uses labeled training data  
+  - Logistic regression
+  - Linear regression
+  - Decision tree
+  - Neural network
+- unsupervised learning  
+  does not uses labeled training data  
+  - Clustering
+  - Association rule learning
+  - Probability density
+  - Dimensionality reduction
