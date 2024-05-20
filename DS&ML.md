@@ -11,4 +11,10 @@ Market Basket Analysis
 - lift  
   list = confidence / 在所有数据中B出现的占比  
   比1大的话，两者相关性高    
-  
+
+## LLM - Large Language Model
+- generate, classify, summary, revise  
+- unsupervised learning with text data  
+- amount of parameters in model is very high  
+- Developed in transformer architecture, before transformer RNN(Recurrent neural network) was the main stream, them LSTM         
+- Example: Chatgpt, Bart  
