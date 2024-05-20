@@ -12,6 +12,19 @@
 - 控制单元（control unit）用于控制CPU工作  
 - 逻辑计算单元（Arithmetic/logic unit）负责计算  
 
+- 参数
+  - Socket Type  
+    determines whether the CPU can be physically installed on the motherboard  
+  - cores  
+    number of cores affects multitasking and the ability to handle multiple processes simultaneously  
+  - Threads  
+    Each core can handle multiple threads  
+  - Clock Speed  
+    Measured in GHz(Gigahertz), this indicates the speed at which the CPU   
+    Base Clock Speed: speed under normal conditions  
+    Boost/Turbo Clock Speed: The maximum speed the CPU can achieve under load. Can cause over heat and shorter life span  
+  - L1, L2, and L3 Cache  
+    small amounts of very fast memory located on the CPU
 
 ### Concurrency computation 并发 & Parallel computation 并行  
 concurrency ：再复数个任务之前快速切换执行  
