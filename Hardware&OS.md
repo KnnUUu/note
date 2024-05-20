@@ -38,6 +38,13 @@
 a compute resource that uses software instead of a physical computer to run programs and deploy apps. One or more virtual “guest” machines run on a physical “host” machine.  Each virtual machine runs its own operating system and functions separately from the other VMs, even when they are all running on the same host.   
 Common VM: VMware, VirtualBox, Hyper-V  
 
+## Docker
+将应用以及运行环境一并打包部署，解决了在本地开发的软件无法在其他环境里运行的问题  
+Containers are like lightweight, portable virtual machines. They package up an application and all its dependencies (like libraries, system tools, and settings) so that it can run consistently across different environments.  
+
+- VPS(virtual private server): splits a server into multiple virtual private servers  
+- ECS(Elastic Compute Service): Similar to VPS but user can resize base on computing resourse they need  
+- 
 
 ### Concurrency computation 并发 & Parallel computation 并行  
 concurrency ：再复数个任务之前快速切换执行  
