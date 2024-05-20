@@ -28,6 +28,12 @@
   - TDP (Thermal Design Power)  
     Measured in watts, this indicates the amount of heat the CPU generates and how much cooling is required.  
 
+# OS
+- For PC: Windows / Max OS  
+- For Smart Phone: IOS / Android    
+- For Server: Linux  
+与unix关系？  
+
 ### Concurrency computation 并发 & Parallel computation 并行  
 concurrency ：再复数个任务之前快速切换执行  
 Parallelism: 同时执行复数个任务  
