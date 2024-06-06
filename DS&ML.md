@@ -66,3 +66,15 @@ Test set: estimate and analysis mdoel
   - Image and text-to-image
   
   To produce unique and creative outputs, generative models are initially trained using an unsupervised approach, where the model learns to mimic the data it's trained on. The model is sometimes trained further using supervised or reinforcement learning on specific data related to tasks the model might be asked to perform  
+
+# Basic
+## Math
+### 标量、向量、矩阵、张量
+- 标量 scalar  
+  一个单独的数  
+- 向量 vector  
+  一组有序排列的数  
+- 矩阵 matrix  
+  二位数组  
+- 张量 tensor  
+  超过二维的数组  
