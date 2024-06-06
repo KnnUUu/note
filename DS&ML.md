@@ -39,3 +39,30 @@ Test set: estimate and analysis mdoel
   - Association rule learning
   - Probability density
   - Dimensionality reduction
+
+# Google Machine Learning Course  
+### What is Machine Learning?  
+- Supervised learning  
+  predicted answer with question  
+  - Regression  
+    pridict numeric value(price, length of time)  
+  - Classification  
+    value that states whether or not something belongs to a particular category  
+  
+- Unsupervised learning  
+  identify meaningful patterns among the data  
+  - clustering  
+  
+- Reinforcement learning  
+  generates a policy that defines the best strategy for getting the most rewards  
+  
+- Generative AI  
+  take a variety of inputs and create a variety of outputs  
+  - Text-to-text  
+  - Text-to-image  
+  - Text-to-video  
+  - Text-to-code  
+  - Text-to-speech  
+  - Image and text-to-image
+  
+  To produce unique and creative outputs, generative models are initially trained using an unsupervised approach, where the model learns to mimic the data it's trained on. The model is sometimes trained further using supervised or reinforcement learning on specific data related to tasks the model might be asked to perform  
