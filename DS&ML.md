@@ -78,3 +78,28 @@ Test set: estimate and analysis mdoel
   二位数组  
 - 张量 tensor  
   超过二维的数组  
+
+## Data
+### Cross-validation 交叉验证
+- Training Dataset  
+  用于训练模型  
+- Validation Dataset  
+  验证模型预测表现以及调整超参数（Hyperparameter）  
+- Test Dataset  
+  评估模型
+
+划分数据集方式  
+1. 留出法 Holdout cross validation  
+   将三种数据集按照比例划分，一般是Training 60% / Validation 20% / Test 20%  
+
+2. 留一法 Leave one out cross validation  
+   每次的测试集都只有一个样本，要进行 m 次训练和预测。训练的数据只比整体数据集少了一个样本  
+   一般在数据缺乏时使用。  
+
+3. k 折交叉验证 k-fold cross validation  
+   1. 将数据集分为训练集和测试集，将测试集放在一边  
+   2. 将训练集分为 k 份  
+   3. 每次使用 k 份中的 1 份作为验证集，其他全部作为训练集  
+   4. 通过 k 次训练后，我们得到了 k 个不同的模型  
+   5. 评估 k 个模型的效果，从中挑选效果最好的超参数  
+   6. 使用最优的超参数，然后将 k 份数据全部作为训练集重新训练模型，得到最终模型  
