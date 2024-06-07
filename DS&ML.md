@@ -107,7 +107,10 @@ Test set: estimate and analysis mdoel
 [参考](https://easyaitech.medium.com/%E4%B8%80%E6%96%87%E7%9C%8B%E6%87%82-ai-%E6%95%B0%E6%8D%AE%E9%9B%86-%E8%AE%AD%E7%BB%83%E9%9B%86-%E9%AA%8C%E8%AF%81%E9%9B%86-%E6%B5%8B%E8%AF%95%E9%9B%86-%E9%99%84-%E5%88%86%E5%89%B2%E6%96%B9%E6%B3%95-%E4%BA%A4%E5%8F%89%E9%AA%8C%E8%AF%81-9b3afd37fd58)
 
 ### Bias VS Variance
-- Bias 偏差
+- Bias 偏差  
+  对训练数据的拟合程度  
+- Variance 方差  
+  模型复杂程度  
 
-- Variance 方差
-  
+升高Bias降低Variance，反之亦然。
+![1_oO0KYF7Z84nePqfsJ9E0WQ](https://github.com/KnnUUu/note/assets/44579350/cc6bd452-8cfc-4c05-b3b3-253af4125ac9)
