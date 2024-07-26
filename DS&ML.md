@@ -114,3 +114,7 @@ Test set: estimate and analysis mdoel
 
 升高Bias降低Variance，反之亦然。
 ![1_oO0KYF7Z84nePqfsJ9E0WQ](https://github.com/KnnUUu/note/assets/44579350/cc6bd452-8cfc-4c05-b3b3-253af4125ac9)
+
+# Link
+https://medium.com/swlh/cheat-sheets-for-machine-learning-interview-topics-51c2bc2bab4f  
+https://sites.google.com/view/datascience-cheat-sheets  
