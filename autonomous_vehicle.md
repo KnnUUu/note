@@ -1,6 +1,9 @@
 # [AI Model Efficiency Toolkit (AIMET)](https://github.com/quic/aimet)
 > AIMET is a library that provides advanced model quantization and compression techniques for trained neural network models. It provides features that have been proven to improve run-time performance of deep learning neural network models with lower compute and memory requirements and minimal impact to task accuracy.
 
+# [nuPlan](https://www.nuscenes.org/nuplan#code)
+> nuPlan is the world's first large-scale planning benchmark for autonomous driving
+
 # concept
 ### open-loop and close-loop
 open-loop: 从输入到输出是一连串的，按照设定好的顺序执行，没有反馈。例如空调遥控、洗衣机、马路信号灯    
