@@ -4,7 +4,7 @@
 # [nuPlan](https://www.nuscenes.org/nuplan#code)
 > nuPlan is the world's first large-scale planning benchmark for autonomous driving
 
-## environment
+### environment setup
 基本参考[这个页面](https://nuplan-devkit.readthedocs.io/en/latest/installation.html)就可以  
 
 安装nuplan-devkit用的是Option B  
@@ -19,6 +19,16 @@
 ~/nuplan/dataset    -   The dataset folder. Can be read-only.
 ~/nuplan/exp        -   The experiment and cache folder. Must have read and write access.
 ```
+
+### jupyter notebook
+需要用`conda`安装`jupyter notebook`并启动，只是用pip的话之前用`environment.yml`构建的环境不起作用  
+
+先启动环境  
+```
+conda activate nuplan 
+```
+启动jupyter → 建立ssh → 本地浏览器打开  
+参考：https://stackoverflow.com/questions/69244218/how-to-run-a-jupyter-notebook-through-a-remote-server-on-local-machine  
 
 # concept
 ### open-loop and close-loop
