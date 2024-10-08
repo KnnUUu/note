@@ -8,11 +8,15 @@
 基本参考[这个页面](https://nuplan-devkit.readthedocs.io/en/latest/installation.html)就可以  
 
 安装nuplan-devkit用的是Option B  
-`pip install -e .`  
+```
+pip install -e .
+```  
 
 好像是因为数据太大[下载页面](https://www.nuscenes.org/nuplan#code)的数据集无法下载，[这个网页](https://motional-nuplan.s3.ap-northeast-1.amazonaws.com/index.html)的就可以  
 下载完用PSCP传输到开发机或者虚拟机  
-`unzip nuplan-v1.1_mini.zip -d nuplan-v1.1_mini`  
+```
+unzip nuplan-v1.1_mini.zip -d nuplan-v1.1_mini
+```  
 
 这两个文件夹需要自己生成    
 ```
@@ -27,7 +31,18 @@
 ```
 conda activate nuplan 
 ```
-启动jupyter → 建立ssh → 本地浏览器打开  
+启动jupyter  
+```
+jupyter notebook --no-browser --port=8080
+```
+建立ssh
+```
+ssh -L 8080:localhost:8080 kangming.wu@192.168.15.20
+```
+本地浏览器打开
+```
+http://localhost:8080/tree?token=c4a135f3863ec0aaebf5cea44857d36882d8d2ab8230c1a2
+```
 参考：https://stackoverflow.com/questions/69244218/how-to-run-a-jupyter-notebook-through-a-remote-server-on-local-machine  
 
 # concept
