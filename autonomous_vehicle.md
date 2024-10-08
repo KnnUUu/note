@@ -4,6 +4,7 @@
 # [nuPlan](https://www.nuscenes.org/nuplan#code)
 > nuPlan is the world's first large-scale planning benchmark for autonomous driving
 
+## [nuplan-devkit](https://github.com/motional/nuplan-devkit)
 ### environment setup
 基本参考[这个页面](https://nuplan-devkit.readthedocs.io/en/latest/installation.html)就可以  
 
