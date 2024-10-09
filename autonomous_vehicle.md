@@ -28,19 +28,19 @@ unzip nuplan-v1.1_mini.zip -d nuplan-v1.1_mini
 ### jupyter notebook
 需要用`conda`安装`jupyter notebook`并启动，只是用pip的话之前用`environment.yml`构建的环境不起作用  
 
-先启动环境  
+先启动环境（虚拟机）  
 ```
 conda activate nuplan 
 ```
-启动jupyter  
+启动jupyter（虚拟机）  
 ```
 jupyter notebook --no-browser --port=8080
 ```
-建立ssh
+建立ssh（本地）
 ```
 ssh -L 8080:localhost:8080 kangming.wu@192.168.15.20
 ```
-本地浏览器打开
+本地浏览器打开（本地）
 ```
 http://localhost:8080/tree?token=c4a135f3863ec0aaebf5cea44857d36882d8d2ab8230c1a2
 ```
