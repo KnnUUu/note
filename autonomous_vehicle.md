@@ -26,8 +26,9 @@ unzip nuplan-v1.1_mini.zip -d nuplan-v1.1_mini
 
 这两个文件夹需要自己生成    
 ```
-~/nuplan/dataset    -   The dataset folder. Can be read-only.
-~/nuplan/exp        -   The experiment and cache folder. Must have read and write access.
+mkdir ~/nuplan
+mkdir ~/nuplan/dataset
+mkdir ~/nuplan/exp
 ```
 
 ### jupyter notebook
