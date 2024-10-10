@@ -7,6 +7,11 @@
 ## [nuplan-devkit](https://github.com/motional/nuplan-devkit)
 ### environment setup
 基本参考[这个页面](https://nuplan-devkit.readthedocs.io/en/latest/installation.html)就可以  
+conda安装后需要编辑PATH  
+```
+export PATH=$PATH:/home/wu/miniconda3/bin
+source ~/.profile
+```
 
 安装nuplan-devkit用的是Option B  
 ```
