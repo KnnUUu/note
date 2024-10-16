@@ -2,7 +2,7 @@
 Market Basket Analysis  
 用于在大数据中获取数据关联性  
 评价指标  
-- support  
+- support  TAGS
   所有数据里，AB同时出现数据的占比  
   数值越高两者同时出现概率越高  
 - confidence  
@@ -117,6 +117,9 @@ Test set: estimate and analysis mdoel
 
 ### Ground Truth
 正确打标签的训练数据或简单来说就是有效的正确的数据  
+
+# Kaggle
+![image](https://github.com/user-attachments/assets/693989b7-8555-4cc0-b695-63743abf2062)
 
 # Link
 https://medium.com/swlh/cheat-sheets-for-machine-learning-interview-topics-51c2bc2bab4f  
