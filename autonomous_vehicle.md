@@ -66,8 +66,11 @@ close-loop：输出后有反馈来调节输入。例如空调、冰箱、暖炉
 ### imitation learning
 > supervised learning approach in which - in the context of autonomous driving - the behavior of an expert human driver is used as a target signal to supervise the model.
 
- ### agent
+### agent
 > AI programs that can make decisions and take actions on their own. One example is self-driving cars. These cars use autonomous agents to make decisions about when to turn, stop, or go based on the information they gather from sensors.
 
 ### Raster data 
 > pixelated (or gridded) data where each pixel is associated with a specific geographical location
+
+### heading
+用于训练的误差里出现了```heading error```，车子朝向？待解决  
