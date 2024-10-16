@@ -118,6 +118,13 @@ Test set: estimate and analysis mdoel
 ### Ground Truth
 正确打标签的训练数据或简单来说就是有效的正确的数据  
 
+## model
+### backbone
+模型里的基干部分，一般指用于抽出特征的层  
+
+### head
+一般指模型的输出部分  
+
 # Kaggle
 ![image](https://github.com/user-attachments/assets/693989b7-8555-4cc0-b695-63743abf2062)
 
