@@ -15,7 +15,8 @@
   Custom classes are generally mutable  
   `list`, `dict`, `set`  
 
-## OOP
+# OOP
+## class
 ```python
 class Dog:
     kind = 'canine'         # class variable shared by all instances
@@ -24,6 +25,9 @@ class Dog:
     def printKind(self):
         print(self.kind)    # DO NOT FORGET self. WHEN CALLING GLOBAL VARIBLE!!!
 ```
+## colon after variable 
+叫做`type annotations`，用于标记变量数据型  
+参考：https://docs.python.org/3/library/typing.html
 
 ## syntax  
 `try`:测试一段代码是否出错    
