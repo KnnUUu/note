@@ -78,6 +78,8 @@ negative_infinity = -math.inf
 >>> print('{:.10g}'.format(0.1234567)) #超过本身长度的话则不会有变化
 0.1234567
 ```
+
+# data structure
 ## hash
 ### set
 ```python
