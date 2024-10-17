@@ -52,6 +52,10 @@ http://localhost:8080/tree?token=c4a135f3863ec0aaebf5cea44857d36882d8d2ab8230c1a
 ```
 参考：https://stackoverflow.com/questions/69244218/how-to-run-a-jupyter-notebook-through-a-remote-server-on-local-machine  
 
+### dataset
+文件名意义：```<log_date>_<vehicle_number>_<snippet_start>_<snippet_end>.db```  
+
+
 # concept
 ### open-loop and close-loop
 open-loop: 从输入到输出是一连串的，按照设定好的顺序执行，没有反馈。例如空调遥控、洗衣机、马路信号灯    
