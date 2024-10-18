@@ -18,6 +18,9 @@
 
 ### Object Relational Mapping (ORM)
 使得OOP可以像使用SQL一样操作数据库的库  
+
+### binary large object(BLOB)
+a varying-length binary string that can be up to 2,147,483,647 characters long.
    
 ## SQL
 ### 常用命令
