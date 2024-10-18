@@ -15,6 +15,9 @@
 
 3. 键值（key-value）数据库  
    Apache Cassandra（为Facebook所使用）：高度可扩展、Dynamo、LevelDB（Google）  
+
+### Object Relational Mapping (ORM)
+使得OOP可以像使用SQL一样操作数据库的库  
    
 ## SQL
 ### 常用命令
