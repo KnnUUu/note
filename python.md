@@ -25,6 +25,21 @@ class Dog:
     def printKind(self):
         print(self.kind)    # DO NOT FORGET self. WHEN CALLING GLOBAL VARIBLE!!!
 ```
+### property
+使得函数可以像变量一样被调用  
+```python
+@property
+def x(self):
+    return self._x      # getter
+
+@x.setter
+def x(self, value):
+    self._x = value     # setter
+
+print(point.x）
+point.x = 30
+```
+
 ## colon after variable 
 叫做`type annotations`，用于标记变量数据型  
 参考：https://docs.python.org/3/library/typing.html
