@@ -78,3 +78,6 @@ close-loop：输出后有反馈来调节输入。例如空调、冰箱、暖炉
 
 ### heading
 用于训练的误差里出现了```heading error```，车子朝向？待解决  
+
+### Lidar
+> determining ranges by targeting an object or a surface with a laser and measuring the time for the reflected light to return to the receiver. 
