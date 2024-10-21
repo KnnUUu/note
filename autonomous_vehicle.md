@@ -55,6 +55,30 @@ http://localhost:8080/tree?token=c4a135f3863ec0aaebf5cea44857d36882d8d2ab8230c1a
 ### dataset
 文件名意义：```<log_date>_<vehicle_number>_<snippet_start>_<snippet_end>.db```  
 
+`.db`文件可以用`DB Browser for SQLite`打开，但因为很多都是BLOB文件，所以还是需要用devkit自带的库来读取数据  
+
+```python
+class NuPlanDB(DB)
+```
+读取`.db`文件后得到的类  
+
+```python
+from nuplan.database.tests.test_utils_nuplan_db import get_test_nuplan_db
+
+db = get_test_nuplan_db()
+print(type(db.session))
+print(db.session)
+print(type(db.name))
+print(db.name)
+print(type(db.data_root))
+print(db.data_root)
+print(type(db.table_root))
+print(db.table_root)
+print(type(db.table_names))
+print(db.table_names)
+print(type(db.tables['category']))
+print(db.tables['category'].all())
+```
 
 # concept
 ### open-loop and close-loop
