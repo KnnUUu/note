@@ -105,3 +105,6 @@ close-loop：输出后有反馈来调节输入。例如空调、冰箱、暖炉
 
 ### Lidar
 > determining ranges by targeting an object or a surface with a laser and measuring the time for the reflected light to return to the receiver. 
+
+### point cloud
+三维空间里点的集合  
