@@ -25,6 +25,11 @@ decltype(f()) sum = x;
 
 [参考](https://www.runoob.com/w3cnote/c-volatile-keyword.html)  
 
+`final`  
+1. 修饰类禁止被继承  
+2. 修饰virtual禁止overwrite  
+根java的区别是，final在cpp里写在类根函数名的后面  
+
 ## 函数 function
 ### 基础
 函数定义时叫形参（parameter）  
