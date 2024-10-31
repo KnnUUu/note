@@ -80,7 +80,7 @@ print(type(db.tables['category']))
 print(db.tables['category'].all())
 ```
 
-# concept
+# concept 用语集
 ### open-loop and close-loop
 open-loop: 从输入到输出是一连串的，按照设定好的顺序执行，没有反馈。例如空调遥控、洗衣机、马路信号灯    
 ![image](https://github.com/user-attachments/assets/38c4f5c1-ad6e-452c-93d7-34c01f9dafa4)
@@ -108,3 +108,6 @@ close-loop：输出后有反馈来调节输入。例如空调、冰箱、暖炉
 
 ### point cloud
 三维空间里点的集合  
+
+### Topology 拓扑
+![image](https://github.com/user-attachments/assets/cb748bae-8522-4802-9404-88d4db8dc232)
