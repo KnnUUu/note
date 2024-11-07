@@ -80,6 +80,9 @@ print(type(db.tables['category']))
 print(db.tables['category'].all())
 ```
 
+- gpkg文件  
+  layer类似ps的layer，上层会遮挡下层  
+
 # concept 用语集
 ### open-loop and close-loop
 open-loop: 从输入到输出是一连串的，按照设定好的顺序执行，没有反馈。例如空调遥控、洗衣机、马路信号灯    
