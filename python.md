@@ -39,6 +39,10 @@ def x(self, value):
 print(point.x）
 point.x = 30
 ```
+### 继承
+```python
+ class Student(Person):
+```
 
 ## colon after variable 
 叫做`type annotations`，用于标记变量数据型  
