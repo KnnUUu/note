@@ -42,6 +42,7 @@ point.x = 30
 ### 继承
 ```python
  class Student(Person):
+    super().__init__(name) # super会返回一个父类的实体
 ```
 
 ## colon after variable 
