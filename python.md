@@ -283,6 +283,6 @@ Helao, World!
 ```
 
 # environment
-## __init__.py
-用于标记库，使得其他程序可以调用  
+## `__init__.py`
+用于标记库，使得该路径的程序可以被其他程序调用  
 参考：https://stackoverflow.com/questions/448271/what-is-init-py-for  
