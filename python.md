@@ -281,3 +281,8 @@ Helao, World!
 >>> chr(97)
 ‘a’
 ```
+
+# environment
+## '__init__.py'
+用于标记库，使得其他程序可以调用  
+参考：https://stackoverflow.com/questions/448271/what-is-init-py-for  
