@@ -285,4 +285,5 @@ Helao, World!
 # environment
 ## `__init__.py`
 用于标记库，使得该路径的程序可以被其他程序调用  
+一个文件夹根目录下存在 __init__.py 那就会认为该文件夹是Python包，否则那这个文件夹就是一个普通的文件夹  
 参考：https://stackoverflow.com/questions/448271/what-is-init-py-for  
