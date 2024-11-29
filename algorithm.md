@@ -4,6 +4,10 @@
 
 # 数据结构
 ## Tree
+- 不同类型的树  
+  - Binary Tree 固定两子节点  
+  - Binary Search Tree 左小右大或者反过来  
+  - red-black tree 自平衡的二叉搜索树  
 - 有序
 - search，insert, erase O(Log n)   
 - C++ std::map / ~Python OrderedDict()~ OrderedDict只是记录插入顺序而无法按照键或者值排序    
