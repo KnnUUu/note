@@ -1,0 +1,13 @@
+# 1.1
+机器学习的应用：广告推送、图像识别、医学诊断辅助。。。  
+# 1.2
+# 2.1
+使用频率：监督学习（90%以上） -> 非监督学习 -> 强化学习  
+# 2.2
+回归 regression：从无数可能数字中预测一个数字  
+# 2.3
+分类 classification：在有限的结果里预测其中一个  
+# 2.4
+unsupervised learning: find something interesting in unlabeled data  
+clustering 聚类: put unlabeled data into different clusters  
+应用：google news、人类基因组分类、给予数据将客户分类  
