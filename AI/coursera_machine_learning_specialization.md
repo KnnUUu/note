@@ -11,3 +11,7 @@
 unsupervised learning: find something interesting in unlabeled data  
 clustering 聚类: put unlabeled data into different clusters  
 应用：google news、人类基因组分类、给予数据将客户分类  
+# 2.5
+anomaly detection: find unusual data points  
+输入一堆邮件数据，让算法自己分类  
+输入金融数据，检测异常  
