@@ -15,3 +15,12 @@ clustering 聚类: put unlabeled data into different clusters
 anomaly detection: find unusual data points  
 输入一堆邮件数据，让算法自己分类  
 输入金融数据，检测异常  
+# 2.6
+# 2.7
+linear regression 线性回归：为数据拟合一条直线  
+trainnig set: 用于训练模型  
+x：输入  
+y：输出  
+m：训练数据量  
+(x,y)：单个训练数据  
+(x<sup>(i)</sup>,y<sup>(i)</sup>)：第i个数据  
