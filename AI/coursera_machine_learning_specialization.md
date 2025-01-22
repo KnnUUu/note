@@ -24,3 +24,20 @@ y：输出
 m：训练数据量  
 (x,y)：单个训练数据  
 (x<sup>(i)</sup>,y<sup>(i)</sup>)：第i个数据  
+# 2.8
+$\hat{y}$：y的估计或预测  
+y：训练集中的真实值  
+f：模型  
+
+|General <img width=70/> <br />  Notation  <img width=70/> | Description<img width=350/>| Python (if applicable) |
+|:------------|:------------------------------------------------------------|----|
+| $a$ | scalar, non bold                                                      ||
+| $\mathbf{a}$ | vector, bold                                                      ||
+| **Regression** |         |    |     |
+|  $\mathbf{x}$ | Training Example feature values | `x_train` |   
+|  $\mathbf{y}$  | Training Example targets  | `y_train` 
+|  $x^{(i)}$, $y^{(i)}$ | $i_{th}$Training Example | `x_i`, `y_i`|
+| m | Number of training examples | `m`|
+|  $w$  |  parameter: weight,                                 | `w`    |
+|  $b$           |  parameter: bias                                           | `b`    |     
+| $f_{w,b}(x^{(i)})$ | The result of the model evaluation at $x^{(i)}$ parameterized by $w,b$: $f_{w,b}(x^{(i)}) = wx^{(i)}+b$  | `f_wb` | 
