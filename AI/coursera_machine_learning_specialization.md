@@ -41,3 +41,8 @@ f：模型
 |  $w$  |  parameter: weight,                                 | `w`    |
 |  $b$           |  parameter: bias                                           | `b`    |     
 | $f_{w,b}(x^{(i)})$ | The result of the model evaluation at $x^{(i)}$ parameterized by $w,b$: $f_{w,b}(x^{(i)}) = wx^{(i)}+b$  | `f_wb` | 
+
+# 3.3
+parameter：也被叫做 coefficient 或 weight  
+cost function: 
+error 误差：预测值与实际值的差距  
