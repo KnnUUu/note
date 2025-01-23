@@ -46,3 +46,6 @@ f：模型
 parameter：也被叫做 coefficient 或 weight  
 cost function: 
 error 误差：预测值与实际值的差距  
+
+# 3.4
+n：参数维度数量  
