@@ -22,6 +22,10 @@ bash启动时读取的设定文件
 ### ~/.profile
 login时读取的的设定文件  
 
+### nano
+vim操作太反人类了，nano比较好用点  
+`$nano filename`  
+
 # command 
 `<`: 从其他文件读取数据  
 `>`: 将输出写入到其他文件里  
