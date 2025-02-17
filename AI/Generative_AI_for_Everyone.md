@@ -67,4 +67,7 @@ llm会胡编乱造
 
 # 9
 扩散模型 diffusion model  
-训练：模糊模型与描述➡️没那么模糊的模型  
+训练：模糊模型与描述➡️没那么模糊的模型 
+<p align="center">
+  <img width="80%" src="images/image_generation_training.png">
+</p>
