@@ -74,3 +74,9 @@ llm会胡编乱造
 <p align="center">
   <img width="80%" src="images/image_generation_output.png">
 </p>
+
+# 10
+使用LLM开发会快很多  
+<p align="center">
+  <img width="80%" src="images/schedual_compare.png">
+</p>
