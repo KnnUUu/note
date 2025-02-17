@@ -71,3 +71,6 @@ llm会胡编乱造
 <p align="center">
   <img width="80%" src="images/image_generation_training.png">
 </p>
+<p align="center">
+  <img width="80%" src="images/image_generation_output.png">
+</p>
