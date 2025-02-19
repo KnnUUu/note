@@ -93,3 +93,10 @@ llm会胡编乱造
   微调大模型，适应特殊需求  
 - pretrain models 预训练模型  
   从头训练一个大语言模型
+
+# 13
+使用大语言模型费用非常便宜  
+使用token计费，一个英语单词大概可以被视作4/3个token  
+<p align="center">
+  <img width="80%" src="images/LLM_cost.png">
+</p>
