@@ -100,3 +100,13 @@ llm会胡编乱造
 <p align="center">
   <img width="80%" src="images/LLM_cost.png">
 </p>
+
+# 14 RAG
+允许llm访问内部文件，那么输入prompt后，llm会在内部文件里搜索  
+相关应用：读取pdf内容生成简介  
+
+把LLM当做一个推理引擎，而不是知识库  
+- LLM有很多通用知识但不知道所有事情  
+- 在prompt提供相关信息，引导llm得到答案  
+- 使用推理来获得答案而不是单纯的知识库  
+
