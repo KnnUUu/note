@@ -80,3 +80,16 @@ llm会胡编乱造
 <p align="center">
   <img width="80%" src="images/schedual_compare.png">
 </p>
+
+# 12
+<p align="center">
+  <img width="80%" src="images/lifecycle_of_a_generative_AI_project.png">
+</p>
+构建生成式AI软件是一个高度实验性的过程，这意味着反复尝试某事，发现并纠正错误  
+
+- Retrieval augmented generation(RAG)  
+  使得大模型可以访问外部数据  
+- fine-tune models  
+  微调大模型，适应特殊需求  
+- pretrain models 预训练模型  
+  从头训练一个大语言模型
