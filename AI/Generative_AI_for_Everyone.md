@@ -134,4 +134,6 @@ LLM本身只是预测句子下一个单词，但使用这个技术使得LLM按�
 
 1. 训练一个模型来评价llm的答案  
 2. 使用这个模型来评估，让llm输出分数更高的答案  
-
+<p align="center">
+  <img width="80%" src="images/RLHF.png">
+</p>
