@@ -123,3 +123,15 @@ fine-tuning通过追加学习，使得模型可以输出不一样的答案
 例子：使得LLM可以处理医学、法律、财务文件  
 - 压缩LLM使其可以在小型设备上运行  
 问题：响应慢  
+
+# 18
+## instruction tuning
+LLM本身只是预测句子下一个单词，但使用这个技术使得LLM按照你的命令输出答案  
+本质是使用一组期待结果的数据来给llm做fine-tuning  
+
+# RLHF - Reinforcement learning from hunman feedback  
+很多公司训练LLM希望是3H（helpfun、honest、harmless）的  
+
+1. 训练一个模型来评价llm的答案  
+2. 使用这个模型来评估，让llm输出分数更高的答案  
+
