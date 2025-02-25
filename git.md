@@ -27,6 +27,9 @@ stash drop
 stash pop
 apply+drop
 
+### stage
+将修改的文件加入下次commit的对象  
+
 ### 将修改merge到其他brunch
 1. Switch/Checkout到需要被merge的branch
 2. 打开log，找到想merge的log，Cherry Pick this comment
