@@ -126,7 +126,7 @@ fine-tuning通过追加学习，使得模型可以输出不一样的答案
 
 # 18
 ## instruction tuning
-LLM本身只是预测句子下一个单词，但使用这个技术使得LLM按照你的命令输出答案  
+LLM本身只是预测句子下一个单词，但使用这个技术使得LLM按照你的prompt输出答案  
 本质是使用一组期待结果的数据来给llm做fine-tuning  
 
 # RLHF - Reinforcement learning from hunman feedback  
@@ -137,3 +137,5 @@ LLM本身只是预测句子下一个单词，但使用这个技术使得LLM按�
 <p align="center">
   <img width="80%" src="images/RLHF.png">
 </p>
+
+先使其能按照指示生成答案，再使其能生成高质量的答案  
