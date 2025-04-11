@@ -160,3 +160,18 @@ LLM本身只是预测句子下一个单词，但使用这个技术使得LLM按�
 在采用答案时，记住要自己检查一遍答案！  
 
 # 21 Task analysis of jobs
+- AI doesn't automate jobs, it automates tasks
+- many jobs involve a collection of many tasks
+
+## gen AI 可用于augmentaion或automation  
+augmentaion；辅助人类  
+automation：自动处理事情  
+
+## Evaluating AI potential 评估潜力
+取决于技术可行性以及商业价值  
+<p align="center">
+  <img width="80%" src="images/AI_potential.png">
+</p>
+
+## 怎么看某个职位需要干什么task
+去招聘网站上看jd  
