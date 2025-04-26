@@ -43,8 +43,8 @@ f：模型
 | $f_{w,b}(x^{(i)})$ | The result of the model evaluation at $x^{(i)}$ parameterized by $w,b$: $f_{w,b}(x^{(i)}) = wx^{(i)}+b$  | `f_wb` | 
 
 # 3.3
-parameter：也被叫做 coefficient 或 weight  
-cost function: 
+parameter参数：也被叫做 coefficient系数 或 weight权重  
+cost function 成本函数：用来衡量模型拟合程度的函数   
 error 误差：预测值与实际值的差距  
 
 # 3.4
@@ -52,3 +52,4 @@ n：参数维度数量
 ![Screenshot 2025-01-23 193535](https://github.com/user-attachments/assets/413b4b0a-80f2-4839-9a0c-7eebd5c82566)
 ![image](https://github.com/user-attachments/assets/bb843c45-824f-4972-aa21-97808ace5280)
 
+ 
