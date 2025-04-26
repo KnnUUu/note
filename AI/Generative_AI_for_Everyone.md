@@ -196,3 +196,11 @@ LLM提升效率例子
    因为效率很高，可以快速出几个不同方案进行ab测试，进而快速迭代  
 4. 优化客户需要解决的任务  
    优化不止可以从产品以及自己家员工进行，也可以从客户的操作这个角度入手  
+
+# 24 团队构建生成AI软件
+<p align="center">
+  <img width="80%" src="images/ai_team.png">
+</p>
+<p align="center">
+  <img width="80%" src="images/addtional_roles.png">
+</p>
