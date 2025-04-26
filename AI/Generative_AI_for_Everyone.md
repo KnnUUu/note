@@ -204,3 +204,31 @@ LLM提升效率例子
 <p align="center">
   <img width="80%" src="images/addtional_roles.png">
 </p>
+
+# 25 跨行业的自动化潜力
+<p align="center">
+  <img width="80%" src="images/exposure_ai_job.png
+">
+</p>
+早期以监督学习为代表的重复性工作受ai影响，而大模型浪潮使得高薪职业更多地收到影响  
+<p align="center">
+  <img width="80%" src="images/ai_impact.png
+"></p>
+纵轴为ai影响的金额，横轴为影响的百分比  
+黄点产业加起来占了整个生成ai产业的75%  
+<p align="center">
+  <img width="80%" src="images/ai_impact_industry.png
+"></p>
+
+# 26 对AI的担扰
+1. 加强人类最坏的影响  
+   LLM从互联网上的文字学习，反映了人类最好以及最坏的一面  
+   通过前面章节里介绍的RLHF技术，使得LLM更不容易传播有害信息   
+2. 丢失工作
+   放射科医生例子，AI在分析x光片上进化得越来越好但是并没有取代放射科医生  
+   1. 解读x光片比想象中难
+   2. 放射科除了解读x光片，还有其他很多的工作要做  
+   “ai不会取代放射科医生，但会用ai的放射科医生会取代不会的”   
+3. 终结者剧情
+   1. 人类有丰富的控制经验，远超个人。比如企业与国家  
+   2. 有很多东西目前仍然无法完全掌控，但却是安全已经有价值的。比如飞机  
