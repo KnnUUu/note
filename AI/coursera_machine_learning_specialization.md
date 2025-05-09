@@ -49,7 +49,9 @@ error 误差：预测值与实际值的差距
 
 # 3.4
 n：参数维度数量  
-![Screenshot 2025-01-23 193535](https://github.com/user-attachments/assets/413b4b0a-80f2-4839-9a0c-7eebd5c82566)
-![image](https://github.com/user-attachments/assets/bb843c45-824f-4972-aa21-97808ace5280)
-
- 
+ <p align="center">
+  <img width="90%" src="images/multiple_features_1.png">
+</p>
+ <p align="center">
+  <img width="90%" src="images/multiple_features_2.png">
+</p>
