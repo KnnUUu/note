@@ -115,6 +115,9 @@ Test set: estimate and analysis mdoel
 升高Bias降低Variance，反之亦然。
 ![1_oO0KYF7Z84nePqfsJ9E0WQ](https://github.com/KnnUUu/note/assets/44579350/cc6bd452-8cfc-4c05-b3b3-253af4125ac9)
 
+- irreducible error 不可约误差  
+  指即使使用最理想的模型，也无法消除的预测误差。这种误差源于数据本身的固有噪声和不可预测性，例如测量误差、标签错误或未观测到的影响因素  
+
 ### Ground Truth
 正确打标签的训练数据或简单来说就是有效的正确的数据  
 
@@ -124,6 +127,9 @@ Test set: estimate and analysis mdoel
 
 ### head
 一般指模型的输出部分  
+
+### Learning Rate Scheduler 学习率调度器
+学习率是优化器中的一个关键超参数，决定了模型在每次参数更新时的步长  
 
 # Kaggle
 ![image](https://github.com/user-attachments/assets/693989b7-8555-4cc0-b695-63743abf2062)
