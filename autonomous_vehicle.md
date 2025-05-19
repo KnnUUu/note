@@ -131,3 +131,6 @@ Pitch：绕物体的横轴（通常是 Y 轴）旋转
 例：飞机机头上仰或下俯的动作  
 
 https://howthingsfly.si.edu/flight-dynamics/roll-pitch-and-yaw
+
+### steering angle
+车轮中心线与汽车中心线形成的夹角  
