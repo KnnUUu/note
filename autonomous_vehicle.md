@@ -120,14 +120,14 @@ close-loop：输出后有反馈来调节输入。例如空调、冰箱、暖炉
 ### Topology 拓扑
 ![image](https://github.com/user-attachments/assets/cb748bae-8522-4802-9404-88d4db8dc232)
 
-### yaw
-绕物体的垂直轴（通常是 Z 轴）旋转  
+### Yaw / Roll / Pitch
+Yaw：绕物体的垂直轴（通常是 Z 轴）旋转  
 例：汽车左右转弯  
 
-### Roll
-物体的纵轴（通常是 X 轴）旋转  
+Roll：物体的纵轴（通常是 X 轴）旋转  
 例：飞机左右倾斜，导致一侧机翼上升、另一侧下降的动作  
 
-### Pitch
-绕物体的横轴（通常是 Y 轴）旋转  
+Pitch：绕物体的横轴（通常是 Y 轴）旋转  
 例：飞机机头上仰或下俯的动作  
+
+https://howthingsfly.si.edu/flight-dynamics/roll-pitch-and-yaw
