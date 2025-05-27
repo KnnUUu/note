@@ -131,6 +131,14 @@ Test set: estimate and analysis mdoel
 ### Learning Rate Scheduler 学习率调度器
 学习率是优化器中的一个关键超参数，决定了模型在每次参数更新时的步长  
 
+### epoch, step, batch
+batch: 一小批样本（例如 32 个样本），模型一次训练处理的单位  
+step: 一次参数更新的次数，每次处理一个 batch 就是一个 step  
+epoch: 整个训练集被完整训练一轮，每看完一遍训练集叫一个 epoch
+
+steps_per_epoch = total_samples // batch_size  
+total_steps = steps_per_epoch × epochs  
+
 # Kaggle
 ![image](https://github.com/user-attachments/assets/693989b7-8555-4cc0-b695-63743abf2062)
 
