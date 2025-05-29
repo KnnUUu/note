@@ -137,3 +137,7 @@ https://howthingsfly.si.edu/flight-dynamics/roll-pitch-and-yaw
 
 ### throttle 节气门
 制车辆加速的电子信号。自动驾驶系统通过计算所需的加速度，发送相应的"throttle"值（通常在0到1之间）  
+
+### TTC(Time to Collision) 碰撞时间
+车辆在当前速度和行驶方向下，与前方障碍物或车辆发生碰撞所需时间  
+TTC = 相对距离 ÷ 相对速度  
