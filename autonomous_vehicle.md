@@ -134,3 +134,6 @@ https://howthingsfly.si.edu/flight-dynamics/roll-pitch-and-yaw
 
 ### steering angle
 车轮中心线与汽车中心线形成的夹角  
+
+### throttle 节气门
+制车辆加速的电子信号。自动驾驶系统通过计算所需的加速度，发送相应的"throttle"值（通常在0到1之间）  
