@@ -4,7 +4,7 @@
 大指的更好的更快的电脑，更大的内存  
 10~20年，大模型的发展  
 
-LLM通过监督学习构建，将文章数据拆分为prompt（input）跟output，用于预测语句的下一段话  
+LLM通过监督学习构建，将文章数据拆分为prompt（input）跟completion（output），用于预测语句的下一段话  
 
 # 2
 llmy有时候会编造事实，称为hallucination幻觉  
