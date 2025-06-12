@@ -19,6 +19,15 @@ Market Basket Analysis
 - Developed in transformer architecture, before transformer RNN(Recurrent neural network) was the main stream, them LSTM         
 - Example: Chatgpt, Bart  
 
+GPT: Generative Pre-trained Transformer 生成式预训练Transformer  
+原理很简单，给定一段文字，gpt预测下一个单词，并把概率最高的单词加入文字末尾，重复  
+
+1. 输入首先被分割成小的token  
+2. 将token转换为向量，意思接近的单词（例：jump和hop）在向量空间内会比较接近  
+   向量差也会有类似的意义，例子：man-woman和uncle-aunt  
+3. attention层：各个单词之间互相影响改变向量内部值，原理是同一个单词在不同句子内有不同的意义（例：machine learning model和fashion model）  
+4. MLP（或者叫feed-forward）层：分析单词，单数双数、是否人名、是什么语言等等
+5. 重复attention层MLP层
 ## Deep Learning
 Standardization: make mean of values is 0 and the standard deviation is 1  
 Normalization: make data distribution  
