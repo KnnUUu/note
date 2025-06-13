@@ -153,8 +153,23 @@ total_steps = steps_per_epoch × epochs
 
 ### softmax层
 把模型输出的一组实数（logits）转换成归一化的概率分布  
-softmax(x_i) = exp(x_i) / sum(exp(x_j))   (for all j)
-
+```python
+def softmax(logits):
+    # 1. 防止数值溢出：减去最大值（提高稳定性）
+    shifted = logits - np.max(logits)
+    # 2. 对每个元素求指数
+    exps = np.exp(shifted)
+    # 3. 除以总和归一化
+    return exps / np.sum(exps)
+```
+### softmax with temperature
+当T变大的时候，会给低值赋予更多权重（更高的概率），输出更加随机  
+```python
+def softmax_temperature(logits, T=1.0):
+    shifted = logits - np.max(logits)
+    exps = np.exp(shifted / T)
+    return exps / np.sum(exps)
+```
 # Kaggle
 ![image](https://github.com/user-attachments/assets/693989b7-8555-4cc0-b695-63743abf2062)
 
