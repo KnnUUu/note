@@ -28,6 +28,9 @@ GPT: Generative Pre-trained Transformer 生成式预训练Transformer
 3. attention层：各个单词之间互相影响改变向量内部值，原理是同一个单词在不同句子内有不同的意义（例：machine learning model和fashion model）  
 4. MLP（或者叫feed-forward）层：分析单词，单数双数、是否人名、是什么语言等等
 5. 重复attention层MLP层
+
+### Transformer
+
 ## Deep Learning
 Standardization: make mean of values is 0 and the standard deviation is 1  
 Normalization: make data distribution  
@@ -147,6 +150,10 @@ epoch: 整个训练集被完整训练一轮，每看完一遍训练集叫一个 
 
 steps_per_epoch = total_samples // batch_size  
 total_steps = steps_per_epoch × epochs  
+
+### softmax层
+把模型输出的一组实数（logits）转换成归一化的概率分布  
+softmax(x_i) = exp(x_i) / sum(exp(x_j))   (for all j)
 
 # Kaggle
 ![image](https://github.com/user-attachments/assets/693989b7-8555-4cc0-b695-63743abf2062)
