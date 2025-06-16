@@ -142,6 +142,15 @@ Test set: estimate and analysis mdoel
   人不必猫或者狗大，狗不必猫更接近人类  
 - ✅ `[1,0,0][0,1,0][0,0,1]`  
   在坐标系中互相垂直不互相影响  
+
+### Cross‑Entropy Loss
+![Cross‑Entropy Loss function](images/cross_entropy_loss.png)
+
+### Categorical Cross-Entropy loss
+Softmax + Cross‑Entropy Loss，用于multi-class classification（结果为几个类中的一个）  
+
+### Binary Cross-entropy loss
+Sigmoid + Cross- Entropy loss，用于 multi-label classification（结果为几个类中的多个）  
 ## model
 ### backbone
 模型里的基干部分，一般指用于抽出特征的层  
