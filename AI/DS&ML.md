@@ -29,8 +29,10 @@ GPT: Generative Pre-trained Transformer 生成式预训练Transformer
 4. MLP（或者叫feed-forward）层：分析单词，单数双数、是否人名、是什么语言等等
 5. 重复attention层MLP层
 
+将softmax with temperature的T设置为0,生成文章会很老套。设置更高，生成文章会更加具有随机性，更加的新奇or荒诞  
 ### Transformer
-
+embedding：将token（接近单词）关联到tensor，只有单词自己含义没有联系上下文    
+attention：各个tensor互相影响调整内部值，联系上下文  
 ## Deep Learning
 Standardization: make mean of values is 0 and the standard deviation is 1  
 Normalization: make data distribution  
