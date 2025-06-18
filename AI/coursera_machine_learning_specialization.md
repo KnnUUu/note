@@ -64,3 +64,11 @@ n：参数维度数量
 
 # 3.6
 👆的具体例子  
+
+# 3.7 梯度下降
+squared error cost function（平方误差代价函数）：指MSE  
+对于具有平方误差代价函数的线性回归，函数总是呈弓形或者吊床形  
+但在实际情况中，可以有多个低谷，叫做局部极小值 local minima  
+<p align="center">
+  <img width="90%" src="images/gradient_descent.png">
+</p>
