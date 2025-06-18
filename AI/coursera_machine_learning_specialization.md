@@ -55,3 +55,12 @@ n：参数维度数量
  <p align="center">
   <img width="90%" src="images/multiple_features_2.png">
 </p>
+
+# 3.5
+1维：笑脸状函数  
+2维：碗状函数  
+
+等高图：loss一样的点，想象一下山的等高图  
+
+# 3.6
+👆的具体例子  
