@@ -7,7 +7,7 @@
 LLM通过监督学习构建，将文章数据拆分为prompt（input）跟completion（output），用于预测语句的下一段话  
 
 # 2
-llmy有时候会编造事实，称为hallucination幻觉  
+llm有时候会编造事实，称为hallucination幻觉  
 
 # 3
 LLM是一种通用技术，不专注于特定内容，类似电力  
