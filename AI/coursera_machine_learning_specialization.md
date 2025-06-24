@@ -72,3 +72,19 @@ squared error cost function（平方误差代价函数）：指MSE
 <p align="center">
   <img width="90%" src="images/gradient_descent.png">
 </p>
+
+### 4.2 实现梯度下降
+假设loss函数是二维的，有 $w, b$ 两个参数  
+则参数以以下的方式更新  
+
+$$
+\begin{aligned}
+w^{(t+1)} &= w^{(t)} - \alpha\ \frac{\partial J(w^{(t)}, b^{(t)})}{\partial w},\\
+b^{(t+1)} &= b^{(t)} - \alpha\ \frac{\partial J(w^{(t)}, b^{(t)})}{\partial b},
+\end{aligned}
+$$
+$ α $：学习速率（learning rate）  
+$ t $：参数更新次数  
+$  J(w^{(t)}, b^{(t)}) $：损失函数  
+
+注意各个参数必须**同时**更新，不能现更新$ w $再更新$ b $  
