@@ -117,8 +117,29 @@ GPU计算方法：向量点乘
 
 ### 5.3 向量化 part2
 
-### 6.1 feature scaling 特征缩放
+### 6.1 feature scaling 特征缩放 part1
 当一个特征可能取值很大时（300～2000），参数的合理值比较小  
 当一个特征可能取值很小时（1～5），参数的合理值比较大  
 导致不同特镇对于损失函数的影响不同，梯度下降很难收敛  
 所以需要特征缩放来使得各个特征取值范围相同  
+
+### 6.2 feature scaling 特征缩放 part2
+- 最简单方法
+  直接将值除以最大值  
+
+- mean normalization 均值归一法  
+  使得大多数数据在(-1,1)的区间内  
+  $$
+  x_{\text{norm}} = \frac{x - \mu}{x_{\max} - x_{\min}}
+  $$
+  $\mu$为平均值  
+
+- z-score normalization z-score归一法   
+  作用是使数据均值为0、标准差为1  
+  $$
+  x_{\text{norm}} = \frac{x - \mu}{\sigma}
+  $$
+  其中 $x$ 是原始值，$\mu$ 是均值，$\sigma$ 是每个特征的标准差 standand deciation  
+
+目标是使得大部分数据分布在(-1,1)的区间，但稍微超过一点点影响不大  
+
