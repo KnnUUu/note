@@ -159,3 +159,5 @@ Automatic convergence test
 ### 6.5 特征工程 feature engineering
 使用对问题的知识或直觉，通过转换或者结合原有特征来设计新特征，使学习算法更容易作出正确的预测  
 
+### 6.6 多项式回归 Polynomial regression
+创造幂次特征（$x^2$、$x^3$、$\sqrt{x}$）后，特征缩放会变得越来越重要
