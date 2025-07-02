@@ -156,3 +156,6 @@ Automatic convergence test
 如果loss没有下降，试着将alpha设置为一个很小的值，如果这样也无法下降的话通常说明有bug  
 使用少量的epoch测试一系列的学习率，选出一个能快速降低loss的再开始学习  
 
+### 6.5 特征工程 feature engineering
+使用对问题的知识或直觉，通过转换或者结合原有特征来设计新特征，使学习算法更容易作出正确的预测  
+
