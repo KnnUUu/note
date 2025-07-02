@@ -161,3 +161,13 @@ Automatic convergence test
 
 ### 6.6 多项式回归 Polynomial regression
 创造幂次特征（$x^2$、$x^3$、$\sqrt{x}$）后，特征缩放会变得越来越重要
+
+### 7.1 motivations
+在分类问题里，线性回归不如逻辑回归  
+<p align="center">
+  <img width="90%" src="images/linear_regression_classification.png">
+</p>
+蓝线：一开始的线性回归  
+绿线：加入最右边新点后的线性回归  
+紫线：设置一个阈值，低于阈值预测为no反之为yes  
+加入最右边新点后，新的模型不能很好的预测  
