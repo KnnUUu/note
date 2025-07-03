@@ -171,3 +171,10 @@ Automatic convergence test
 绿线：加入最右边新点后的线性回归  
 紫线：设置一个阈值，低于阈值预测为no反之为yes  
 加入最右边新点后，新的模型不能很好的预测  
+
+### 7.2 逻辑回归 logistic regression
+sigmoid(logistic) function: 将任意实数映射到 (0, 1) 区间，输出可以解释为概率，帮助模型进行二分类预测  
+$$
+\sigma(z) = \frac{1}{1 + e^{-z}}
+$$
+将sigmoid接在模型的输出后面  
