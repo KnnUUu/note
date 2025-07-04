@@ -94,6 +94,9 @@ Test set: estimate and analysis mdoel
   超过二维的数组  
 
 ## Data
+### sampling
+从一个数据集或概率分布中选择样本的过程  
+
 ### Cross-validation 交叉验证
 - Training Dataset  
   用于训练模型  
