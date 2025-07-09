@@ -190,3 +190,22 @@ $$
 
 ## 7.3 决策边界 decision boundary
 使用高级多项式可以创造复杂的决策边界来拟合数据  
+
+# 8
+## 1 逻辑回归的代价函数
+<p align="center">
+  <img width="90%" src="images/logicstic_regression_loss.png">
+</p>
+线性回归使用的平方差代价函数在逻辑回归会存在很多局部最小值  
+
+$$
+J(w, b) = -\frac{1}{m} \sum_{i=1}^m \left[ y^{(i)} \log(\hat{y}^{(i)}) + (1 - y^{(i)}) \log(1 - \hat{y}^{(i)}) \right]
+$$
+
+其中：
+
+- $J(w, b)$：整体损失函数
+- $m$：样本总数
+- $y^{(i)}$：第$i$个样本的真实标签
+- $\hat{y}^{(i)}$：第$i$个样本的预测概率
+- $w, b$：模型参数
