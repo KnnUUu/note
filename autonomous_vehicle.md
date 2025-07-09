@@ -98,7 +98,28 @@ close-loop：输出后有反馈来调节输入。例如空调、冰箱、暖炉
 
 ### planner
 用于决定车辆行进路线与控制车辆的程序  
+```python
+        behavior_trajectory = self.get_behavior_trajectory(environment)
+        return self.get_motion_trajectory(behavior_trajectory)
+```
+- Behavior Planner  
+  选择高层驾驶行为，不生成具体的轨迹或转向命令，而是输出行为意图（maneuver）
+  - 应该换道、超车还是跟车？
+  - 是否通过交叉口？等待红灯还是继续？
+  - 应该加速或减速至多少？
+- Motion Planner  
+  也称为轨迹生成器或本地规划器（Trajectory Planner / Local Planner）  
+  接收高层行为指令，生成一条可执行时空轨迹，包含：  
+  - 空间路径（x, y）
+  - 时间戳 t
+  - 速度 v, 加速度 a, 方向变化 δ
+### navigation route
+从起点到终点的几何级别路径，是给定的空间坐标序列，不包含时间信息  
 
+### Trajectory
+在路径基础上附加了时间、速度、加速度等动态参数的序列，是一段完整的时空参考  
+### perception delay（感知延迟） 
+从车辆采集环境数据（如摄像头、雷达、LiDAR）到系统作出可用输出（如目标检测、物体状态估计）之间的时间间隔  
 ### imitation learning
 > supervised learning approach in which - in the context of autonomous driving - the behavior of an expert human driver is used as a target signal to supervise the model.
 
