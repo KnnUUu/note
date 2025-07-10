@@ -249,3 +249,13 @@ skip
 课程简介  
 
 使用神经网络进行预测prediction也被叫做推理inference  
+
+### 2 神经元和大脑
+一开始是尝试模仿大脑的算法，现在已经没有太大关系  
+
+为何是现在？  
+- 互联网的崛起积累了大量数据，使得神经网络的表现超过了传统ai算法  
+- GPU崛起  
+<p align="center">
+  <img width="90%" src="images/data_vs_performance.png">
+</p>
