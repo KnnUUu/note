@@ -188,6 +188,11 @@ $$
 $$
 $y'$：$\frac{dy}{dx}$：曲线在该点的斜率  
 $y''$：$\frac{d^2y}{dx^2}$：曲线在该点的二阶导数  
+
+### IMU（Inertial Measurement Unit，惯性测量单元）
+测量组成：IMU 通常包含三轴加速度计（Accelerometer）和三轴陀螺仪（Gyroscope），有时也集成磁力计（Magnetometer）  
+输出内容：它提供车辆在 X、Y、Z 三个方向上的线性加速度 和 旋转速率（角速度），用于估算车辆的运动状态  
+
 ## Metrics
 ### ADE
 Average Displacement Error（平均偏移误差）  
