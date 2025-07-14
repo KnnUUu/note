@@ -259,3 +259,8 @@ skip
 <p align="center">
   <img width="90%" src="images/data_vs_performance.png">
 </p>
+
+### 3 需求预测
+并列的神经元被层为层（layer），分为input layer、hidden layer、output layer  
+神经元内部的值叫激活值（activation values）  
+多层神经元可以理解为自动化特征工程  
