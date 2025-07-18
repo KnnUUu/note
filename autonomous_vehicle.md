@@ -229,3 +229,15 @@ classification loss 分类损失
 
 ### reg_loss
 模型预测轨迹与真实轨迹之间的回归损失（平滑L1）  
+
+
+# temp
+- 将nuplan数据转换为项目内部数据形式
+- 模型量子化，尝试ptq和qat
+- 使用pybind将OGM代码python化
+  将pointcloud数据转换为以下数据
+  - occgrid：Occupancy Grid（占据栅格），表示环境中每个栅格是否被障碍物占据，常用于机器人或自动驾驶的地图构建与路径规划。
+  - fspgrid：Free Space Grid（自由空间栅格），表示环境中哪些区域是自由空间，可以安全通行，通常用于导航和避障。
+  - fspbound：Free Space Boundary（自由空间边界），表示自由空间的边界线或轮廓，用于描述可通行区域的边界，辅助决策和路径生成。
+- pluto前处理c++化，提升速度
+- 利用yaw_rate进行数据筛选，提升模型表现
