@@ -1,6 +1,14 @@
 # [AI Model Efficiency Toolkit (AIMET)](https://github.com/quic/aimet)
 > AIMET is a library that provides advanced model quantization and compression techniques for trained neural network models. It provides features that have been proven to improve run-time performance of deep learning neural network models with lower compute and memory requirements and minimal impact to task accuracy.
 
+## Quantization Aware Training
+
+## Post Training Quantization
+
+## QNX
+
+# PLUTO
+
 # [nuPlan](https://www.nuscenes.org/nuplan#code)
 > nuPlan is the world's first large-scale planning benchmark for autonomous driving
 
@@ -192,6 +200,8 @@ $y''$：$\frac{d^2y}{dx^2}$：曲线在该点的二阶导数
 ### IMU（Inertial Measurement Unit，惯性测量单元）
 测量组成：IMU 通常包含三轴加速度计（Accelerometer）和三轴陀螺仪（Gyroscope），有时也集成磁力计（Magnetometer）  
 输出内容：它提供车辆在 X、Y、Z 三个方向上的线性加速度 和 旋转速率（角速度），用于估算车辆的运动状态  
+
+### OGM（Occupancy Grid Map）
 
 ## Metrics
 ### ADE
