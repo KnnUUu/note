@@ -259,3 +259,16 @@ skip
 <p align="center">
   <img width="90%" src="images/data_vs_performance.png">
 </p>
+
+### 3 需求预测
+并列的神经元被层为层（layer），分为input layer、hidden layer、output layer  
+神经元内部的值叫激活值（activation values）  
+多层神经元可以理解为自动化特征工程  
+
+### 4 图像识别
+多层神经网络可以学习数据模式，将神经元里的激活值输出可以看到在学习什么  
+
+## 2
+### 1 神经网络中的层
+神经元内部的值写作$a$，逻辑回归的输出值  
+输入层也被叫做第0层  
