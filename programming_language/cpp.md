@@ -74,9 +74,9 @@ class <派生类名>:<继承方式1><基类名1>,<继承方式2><基类名2>,…
 ```
 ### 多态
 “一个接口，多种实现”，指一个基类中派生出了不同的子类，且每个子类在继承了同样的方法名的同时又对父类的方法做了不同的实现，这就是同一种事物表现出的多种形态。  
-虚函数 `virtual function：virtual dataType functionName()`  
+虚函数 virtual function：`virtual dataType functionName()`  
 派生类中重新定义基类中定义的虚函数时，会告诉编译器不要静态链接到该函数。定义虚函数是为了允许用基类的指针来调用子类的这个函数。  
-纯虚函数 pure virtual function：virtual dataType functionName() = 0  
+纯虚函数 pure virtual function：`virtual dataType functionName() = 0`  
 在基类中又不能对虚函数给出有意义的实现时使用  
 抽象类 abstract class：含有一个以上纯虚函数的类，不能被实体化否则会编译错误  
 ```cpp
