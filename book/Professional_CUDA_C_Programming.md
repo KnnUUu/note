@@ -1,3 +1,4 @@
+# Charpter 1
 2 fundamental types of parallelism  
 - Task parallelism  
   Many tasks or functions that can be operated independently and largely in parallel. Focuses on distributing functions across multiple cores.  
@@ -28,3 +29,16 @@ advances
 - Multi-node with distributed memory
   
 - Multiprocessor with shared memory
+
+Homogeneous computing uses one or more processor of the same architecture to execute an application.   
+Heterogeneous computing instead uses a suite of processor architectures to execute an application, applying tasks to architectures to which they are well-suited, yielding performance improvement as a result.  
+
+in GPU computing terms, the CPU is called the host and the GPU is called the device.  
+
+two important features that describe GPU capability:  
+- Number of CUDA cores  
+- Memory size  
+
+two different metrics for describing GPU performance:  
+- Peak computational performance  
+- Memory bandwidth  
