@@ -191,6 +191,11 @@ def softmax_temperature(logits, T=1.0):
     exps = np.exp(shifted / T)
     return exps / np.sum(exps)
 ```
+
+### Depth-wise Separable Convolution 深度可分离卷积
+种在卷积神经网络（CNN）中常用的高效卷积操作，它的核心思想是将标准卷积拆分成两个步骤：Depth-wise 卷积和 Point-wise 卷积，从而大幅减少计算量和参数量。  
+https://zenn.dev/rockwell/articles/f52495402da83f  
+
 # Kaggle
 ![image](https://github.com/user-attachments/assets/693989b7-8555-4cc0-b695-63743abf2062)
 
