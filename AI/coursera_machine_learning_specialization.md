@@ -40,7 +40,7 @@ f：模型
 | **Regression** |         |    |     |
 |  $\mathbf{x}$ | Training Example feature values | `x_train` |   
 |  $\mathbf{y}$  | Training Example targets  | `y_train` 
-|  $x^{(i)}$, $y^{(i)}$ | $i_{th}$Training Example | `x_i`, `y_i`|
+|  $x^{(i)}$, $y^{(i)}$ | $i_{th}$ Training Example | `x_i`, `y_i`|
 | m | Number of training examples | `m`|
 |  $w$  |  parameter: weight,                                 | `w`    |
 |  $b$           |  parameter: bias                                           | `b`    |     
@@ -83,17 +83,16 @@ squared error cost function（平方误差代价函数）：指MSE
 假设loss函数是二维的，有 $w, b$ 两个参数  
 则参数以以下的方式更新  
 
-$$
-\begin{aligned}
+$$\begin{aligned}
 w^{(t+1)} &= w^{(t)} - \alpha\ \frac{\partial J(w^{(t)}, b^{(t)})}{\partial w},\\
 b^{(t+1)} &= b^{(t)} - \alpha\ \frac{\partial J(w^{(t)}, b^{(t)})}{\partial b},
-\end{aligned}
-$$
-$ α $：学习速率（learning rate）  
-$ t $：参数更新次数  
-$  J(w^{(t)}, b^{(t)}) $：损失函数  
+\end{aligned}$$  
 
-注意各个参数必须**同时**更新，不能现更新$ w $再更新$ b $  
+$α$：学习速率（learning rate）  
+$t$：参数更新次数  
+$J(w^{(t)}, b^{(t)})$：损失函数  
+
+注意各个参数必须**同时**更新，不能现更新 $w$ 再更新 $b$  
 
 ### 4.3 梯度下降的直观理解
 导数是斜率，斜率越高移动的速度越快，斜率低移动慢  
@@ -132,22 +131,22 @@ GPU计算方法：向量点乘
 所以需要特征缩放来使得各个特征取值范围相同  
 
 ### 6.2 feature scaling 特征缩放 part2
-- 最简单方法
+- 最简单方法  
   直接将值除以最大值  
 
 - mean normalization 均值归一法  
-  使得大多数数据在(-1,1)的区间内  
-  $$
-  x_{\text{norm}} = \frac{x - \mu}{x_{\max} - x_{\min}}
-  $$
+  使得大多数数据在(-1,1)的区间内
+  
+  $$x_{\text{norm}} = \frac{x - \mu}{x_{\max} - x_{\min}}$$
+  
   $\mu$为平均值  
 
 - z-score normalization z-score归一法   
-  作用是使数据均值为0、标准差为1  
-  $$
-  x_{\text{norm}} = \frac{x - \mu}{\sigma}
-  $$
-  其中 $x$ 是原始值，$\mu$ 是均值，$\sigma$ 是每个特征的标准差 standand deciation  
+  作用是使数据均值为0、标准差为1
+  
+  $$x_{\text{norm}} = \frac{x - \mu}{\sigma}$$
+  
+  其中 $x$ 是原始值， $\mu$ 是均值， $\sigma$ 是每个特征的标准差 standand deciation  
 
 目标是使得大部分数据分布在(-1,1)的区间，但稍微超过一点点影响不大  
 
@@ -168,7 +167,7 @@ Automatic convergence test
 使用对问题的知识或直觉，通过转换或者结合原有特征来设计新特征，使学习算法更容易作出正确的预测  
 
 ### 6.6 多项式回归 Polynomial regression
-创造幂次特征（$x^2$、$x^3$、$\sqrt{x}$）后，特征缩放会变得越来越重要
+创造幂次特征（ $x^2$ 、 $x^3$ 、 $\sqrt{x}$ ）后，特征缩放会变得越来越重要
 
 ## 7
 ### 7.1 motivations
@@ -183,9 +182,9 @@ Automatic convergence test
 
 ### 7.2 逻辑回归 logistic regression
 sigmoid(logistic) function: 将任意实数映射到 (0, 1) 区间，输出可以解释为概率，帮助模型进行二分类预测  
-$$
-\sigma(z) = \frac{1}{1 + e^{-z}}
-$$
+
+$$\sigma(z) = \frac{1}{1 + e^{-z}}$$  
+
 将sigmoid接在模型的输出后面  
 被解读为y等于1的概率  
 
@@ -207,8 +206,8 @@ $$
 
 - $J(w, b)$：整体损失函数
 - $m$：样本总数
-- $y^{(i)}$：第$i$个样本的真实标签
-- $\hat{y}^{(i)}$：第$i$个样本的预测概率
+- $y^{(i)}$：第 $i$ 个样本的真实标签
+- $\hat{y}^{(i)}$：第 $i$ 个样本的预测概率
 - $w, b$：模型参数
 
 ## 10
@@ -226,11 +225,15 @@ $$
 
 ### 3 正则化代价函数
 L1正则化（Lasso）：在损失函数中加入参数绝对值之和作为惩罚项  
-$$ J(w, b) = \text{原损失} + \lambda \sum_{j=1}^n |w_j| $$  
+
+$$J(w, b) = \text{原损失} + \lambda \sum_{j=1}^n |w_j|$$  
+
 这样可以促使部分参数变为0，实现特征选择。  
 
 L2正则化（Ridge）：在损失函数中加入参数平方和作为惩罚项  
+
 $$ J(w, b) = \text{原损失} + \lambda \sum_{j=1}^n w_j^2 $$  
+
 这样可以让参数变小但不为0，使模型更平滑、减少过拟合。  
 
 $\lambda$（lambda）是正则化系数或正则化强度  
@@ -270,5 +273,5 @@ skip
 
 ## 2
 ### 1 神经网络中的层
-神经元内部的值写作$a$，逻辑回归的输出值  
+神经元内部的值写作 $a$，逻辑回归的输出值  
 输入层也被叫做第0层  
