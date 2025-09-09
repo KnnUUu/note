@@ -192,9 +192,23 @@ def softmax_temperature(logits, T=1.0):
     return exps / np.sum(exps)
 ```
 
+### leaky relu
+普通relu的缺点是，当神经元输入长期小于 0 时，会导致“神经元死亡”，不再更新。  
+
+$$f(x) =
+\begin{cases}
+x, & x > 0 \\
+\alpha x, & x \leq 0
+\end{cases}$$  
+
+其中 $a$ 是一个很小的常数（例如 0.01）。这样在输入为负数时，不是直接输出 0，而是给它留一条“泄露通道”，让梯度保持一个微小的非零值，避免神经元完全失效。  
+
 ### Depth-wise Separable Convolution 深度可分离卷积
 种在卷积神经网络（CNN）中常用的高效卷积操作，它的核心思想是将标准卷积拆分成两个步骤：Depth-wise 卷积和 Point-wise 卷积，从而大幅减少计算量和参数量。  
 https://zenn.dev/rockwell/articles/f52495402da83f  
+
+### stride 步幅
+指的是cnn卷积核在输入特征图上滑动时，每次移动的像素  
 
 # Kaggle
 ![image](https://github.com/user-attachments/assets/693989b7-8555-4cc0-b695-63743abf2062)
