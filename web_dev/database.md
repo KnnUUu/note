@@ -64,7 +64,13 @@ a varying-length binary string that can be up to 2,147,483,647 characters long.
 - 删除table  
   `DROP TABLE [tablename];`  
 - 创建新表  
-  `CREATE TABLE IF NOT EXISTS [tblname] (col_name data_type, ...);`  
+  ```sql
+  CREATE TABLE IF NOT EXISTS [tblname] (
+    [column_1] [data_type], 
+    [column_2] [data_type], 
+    [column_3] [data_type]
+    );
+  ```  
 - 增加栏  
   `ALTER TABLE [tblname] ADD [col_name] [data_type];`  
 - 删除栏  
