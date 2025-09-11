@@ -62,6 +62,19 @@ a varying-length binary string that can be up to 2,147,483,647 characters long.
    多行注释
   */
   ```
+- 创建table
+  ```sql
+  CREATE TABLE celebs (
+    id INTEGER PRIMARY KEY, 
+    name TEXT UNIQUE,
+    date_of_birth TEXT NOT NULL,
+    date_of_death TEXT DEFAULT 'Not Applicable'
+  );
+  ```
+  PRIMARY KEY：唯一标识表中的每一行，且不能为空。  
+  UNIQUE：保证该列中的所有值都唯一，允许null。  
+  NOT NULL：该列的值不能为空。可以接在UNIQUE后面使用  
+  DEFAULT：为该列设置默认值，如果插入时未指定则使用该值。  
 - 获取特定栏数据  
   ```sql
   SELECT [tablename1,tablename2...] FROM [tablename] WHERE [conditions];
