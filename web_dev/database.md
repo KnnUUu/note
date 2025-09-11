@@ -25,44 +25,76 @@ a varying-length binary string that can be up to 2,147,483,647 characters long.
 ## SQL
 ### 常用命令
 - 登录  
-  `mysql -u[id] -p[password]`  
+  ```sql
+  mysql -u[id] -p[password]
+  ```
 - 登录（无密码）  
-  `mysql -uroot`  
+  ```sql
+  mysql -uroot
+  ```
 - 退出  
-  `exit;`  
+  ```sql
+  exit;
+  ```
 - 数据库一览  
-  `SHOW DATABASES;`  
+  ```sql
+  SHOW DATABASES;
+  ```
 - 选择数据库  
-  `USE [dbname];`  
+  ```sql
+  USE [dbname];
+  ```
 - 查看table设置  
-  `DESC [tablename]; or DESCRIBE [tablename];`  
+  ```sql
+  DESC [tablename];
+  -- 或
+  DESCRIBE [tablename];
+  ```
 - 查看更详细的table设置  
-  `SHOW CREATE TABLE [tablename];`  
+  ```sql
+  SHOW CREATE TABLE [tablename];
+  ```
 - 注释  
-  `-- 单行注释`  
+  ```sql
+  -- 单行注释
 
-  ```sql  
   /*
    多行注释
   */
-  ```  
+  ```
 - 获取特定栏数据  
-  `SELECT [tablename1,tablename2...] FROM [tablename] WHERE [conditions];`  
+  ```sql
+  SELECT [tablename1,tablename2...] FROM [tablename] WHERE [conditions];
+  ```
 - 除查询结果中的重复值  
-  `SELECT DISTINCT city FROM users;`  
+  ```sql
+  SELECT DISTINCT city FROM users;
+  ```
 - 数据分页  
-  `SELECT * FROM users LIMIT 10 OFFSET 20;`  
+  ```sql
+  SELECT * FROM users LIMIT 10 OFFSET 20;
+  ```
   跳过前 20 行，从第 21 行开始，返回 10 条记录  
 - 获取整个table数据  
-  `SELECT * FROM [tablename] WHERE [conditions];`  
+  ```sql
+  SELECT * FROM [tablename] WHERE [conditions];
+  ```
 - 删除数据（无法恢复:warning:）  
-  `DELETE FROM [tablename] WHERE [conditions];`  
+  ```sql
+  DELETE FROM [tablename] WHERE [conditions];
+  ```
 - 插入数据  
-  `INSERT INTO [tablename] (column1, column2, column3, ...) VALUES ([column1 value], [column2 value], ...);`  
+  ```sql
+  INSERT INTO [tablename] (column1, column2, column3, ...) VALUES ([column1 value], [column2 value], ...);
+  ```
 - 变更数据  
-  `UPDATE [tablename] SET [colunm name] = [value] WHERE [conditions];`  
+  ```sql
+  UPDATE [tablename] SET [colunm name] = [value] WHERE [conditions];
+  ```
 - 删除table  
-  `DROP TABLE [tablename];`  
+  ```sql
+  DROP TABLE [tablename];
+  ```
 - 创建新表  
   ```sql
   CREATE TABLE IF NOT EXISTS [tblname] (
@@ -70,25 +102,40 @@ a varying-length binary string that can be up to 2,147,483,647 characters long.
     [column_2] [data_type], 
     [column_3] [data_type]
     );
-  ```  
+  ```
 - 增加栏  
-  `ALTER TABLE [tblname] ADD [col_name] [data_type];`  
+  ```sql
+  ALTER TABLE [tblname] ADD [col_name] [data_type];
+  ```
 - 删除栏  
-  `ALTER TABLE [tblname] DROP [col_name];`  
+  ```sql
+  ALTER TABLE [tblname] DROP [col_name];
+  ```
 - 现在时间  
-  `NOW()` or`CURRENT_TIMESTAMP()`  
+  ```sql
+  NOW()
+  -- 或
+  CURRENT_TIMESTAMP()
+  ```
 - 调整时间  
-  `ADDTIME(NOW(),'06:00:00') // 6小时後` `SUBTIME(NOW(),'06:00:00') // 6小时前`    
+  ```sql
+  ADDTIME(NOW(),'06:00:00') -- 6小时后
+  SUBTIME(NOW(),'06:00:00') -- 6小时前
+  ```
 - IN / NOT IN  
-  `SELECT * FROM UserInfo WHERE id IN (1,2,3);`  
+  ```sql
+  SELECT * FROM UserInfo WHERE id IN (1,2,3);
+  ```
 - GROUP BY  
   将拥有同样值得数据集合起来，一般与SUM, COUNT, AVG, MAX, MIN配合使用   
   ```sql
   SELECT AGE, AVG(SALARY) as avg_salary
   FROM CUSTOMERS
   GROUP BY age
+  ```
 
   -- 需要两栏值一样的情况 
+  ```sql
   SELECT gender, age, SUM(salary) AS total_salary
   FROM Custome
   GROUP BY gender, age
@@ -96,7 +143,7 @@ a varying-length binary string that can be up to 2,147,483,647 characters long.
   一般情况下使用where筛选数据，但group by时候则使用having
   ```sql
   GROUP BY group_condition
-  HAVING having _condition
+  HAVING having_condition
   ```
 - 获取字符串长度
   ```sql
