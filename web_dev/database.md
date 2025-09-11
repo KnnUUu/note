@@ -38,8 +38,21 @@ a varying-length binary string that can be up to 2,147,483,647 characters long.
   `DESC [tablename]; or DESCRIBE [tablename];`  
 - 查看更详细的table设置  
   `SHOW CREATE TABLE [tablename];`  
+- 注释  
+  `-- 单行注释`  
+
+  ```sql  
+  /*
+   多行注释
+  */
+  ```  
 - 获取特定栏数据  
   `SELECT [tablename1,tablename2...] FROM [tablename] WHERE [conditions];`  
+- 除查询结果中的重复值  
+  `SELECT DISTINCT city FROM users;`  
+- 数据分页  
+  `SELECT * FROM users LIMIT 10 OFFSET 20;`  
+  跳过前 20 行，从第 21 行开始，返回 10 条记录  
 - 获取整个table数据  
   `SELECT * FROM [tablename] WHERE [conditions];`  
 - 删除数据（无法恢复:warning:）  
@@ -108,6 +121,21 @@ a varying-length binary string that can be up to 2,147,483,647 characters long.
     返回左（右）表有但是右（左）表没有的数据  
   - Full Outer Join Excluding Inner Join  
     返回两个表不关联的数据      
+- 函数
+  ```sql
+  CREATE FUNCTION 函数名(参数列表)
+  RETURNS 返回类型
+  BEGIN
+      -- 函数体
+      RETURN 返回值;
+  END;
+  ```
+  函数变量  
+  ```sql
+  DECLARE x INT;
+  SET x = 5;
+  SET x = x + 2;
+  ```
 ### 性能优化
 1. 连接配置优化  
    1. 服务端配置  
