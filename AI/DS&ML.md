@@ -210,6 +210,37 @@ https://zenn.dev/rockwell/articles/f52495402da83f
 ### stride 步幅
 指的是cnn卷积核在输入特征图上滑动时，每次移动的像素  
 
+### Inverted Residual Block 反残差块
+Pointwise Expand -> Depthwise Conv -> Pointwise Project  
+
+- Pointwise Expand  
+  使用1×1卷积在每个像素点上扩展通道数量  
+  增强特征表达能力  
+
+- Depthwise Conv  
+  对每个通道独立做空间卷积  
+  提取空间特征  
+  
+- Pointwise Project  
+  跟Pointwise Expand相反，减少通道数量  
+  降低参数量  
+
+### Pixel Shuffle
+- Up Pixel Shuffle (上采样)  
+  通道数变少，分辨率变大  
+  常用于图像超分辨率 (SR)、生成对抗网络 (GAN) 的解码器部分，避免反卷积带来的棋盘效应。  
+
+  $N$ ：batch size  
+  $C$ ：通道数  
+  $H，W$ ：图像高宽  
+  $r$ ：缩放因子（scale factor）  
+  输入形状： $$[N, \; C \cdot r^2, \; H, \; W]$$  
+  输出形状： $$[N, \; C, \; H \cdot r, \; W \cdot r]$$  
+  
+- Down Pixel Shuffle (下采样)  
+  Up Pixel Shuffle 的逆操作  
+  分辨率变小通道变多  
+  有时用于图像压缩、特征提取的下采样阶段，或者在模型中构建可逆结构（invertible network）  
 # Kaggle
 ![image](https://github.com/user-attachments/assets/693989b7-8555-4cc0-b695-63743abf2062)
 
