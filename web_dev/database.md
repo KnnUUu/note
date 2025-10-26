@@ -64,6 +64,13 @@ a varying-length binary string that can be up to 2,147,483,647 characters long.
   ```
 - 创建table
   ```sql
+  CREATE TABLE IF NOT EXISTS [tblname] (
+    [column_1] [data_type], 
+    [column_2] [data_type], 
+    [column_3] [data_type]
+    );
+  ```
+  ```sql
   CREATE TABLE celebs (
     id INTEGER PRIMARY KEY, 
     name TEXT UNIQUE,
@@ -108,14 +115,7 @@ a varying-length binary string that can be up to 2,147,483,647 characters long.
   ```sql
   DROP TABLE [tablename];
   ```
-- 创建新表  
-  ```sql
-  CREATE TABLE IF NOT EXISTS [tblname] (
-    [column_1] [data_type], 
-    [column_2] [data_type], 
-    [column_3] [data_type]
-    );
-  ```
+
 - 增加栏  
   ```sql
   ALTER TABLE [tblname] ADD [col_name] [data_type];
@@ -147,7 +147,7 @@ a varying-length binary string that can be up to 2,147,483,647 characters long.
   GROUP BY age
   ```
 
-  -- 需要两栏值一样的情况 
+  需要两栏值一样的情况 
   ```sql
   SELECT gender, age, SUM(salary) AS total_salary
   FROM Custome
