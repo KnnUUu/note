@@ -3,8 +3,8 @@
    vix index 可以预测 周期性  
 
 2. Know macro-economic  
-  USD or CHY up, Cash out, Whale exit, BTC dump  
-  Yield 收益  if US government bonds⬇️ then Crypto Total Market Cap⬆️  
+   USD or CHY up, Cash out, Whale exit, BTC dump  
+   Yield 收益  if US government bonds⬇️ then Crypto Total Market  Cap⬆️  
 
 3. Swing long / Scalp short  
    Scalping 短线交易，收益小风险小  
@@ -31,7 +31,7 @@
    Sell 2.2%  
    -+3.8% long/short safe guard  
 
-8. lways close always short after mega pump  
+8. always close always short after mega pump  
    暴涨后跌下去只有20秒  
    因为庄家利用散户进场来出售  
 
@@ -39,4 +39,4 @@
    及时止损止盈  
 
 10.	Focus on market cap  
-    不要对比价格 对比市值
+    不要对比价格 对比市值  
