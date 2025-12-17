@@ -55,6 +55,29 @@ Streaming Multiprocessor：处理Block的硬件，block 分配给某个 SM，一
 ### SCC（Scalar Condition Code） 标量条件码
 保存比较运算结果，用于后续的分支或条件执行  
 
+### work-item
+aka thread, aka lane  
+lane主要在表述VALU操作时使用  
+
+### wave
+一组（32或64个）work-item组成  
+
+### VGPR(Vector General-Purpose Register)
+保存计算用数据寄存器  
+每个thread占有4byte的空间，总共4byte x work-item里的thread数，私有互相之间无法访问  
+
+### SIMD(Single Instruction Multiple Data)
+用于计算单个wave的vector ALU单元  
+
+### Workgroup
+一组可以互相同步的wave的集合，通过LDS共享数据  
+
+### WGP(Workgroup Processor)
+处理Workgroup的单位，包含scalar跟vector ALU，LDS，scalar caches  
+
+### LDS(Local Data Share)
+分配给waves或者workgroups的内存
+
 ---  
 
 # Render
