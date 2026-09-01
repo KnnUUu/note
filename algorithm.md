@@ -94,30 +94,58 @@ BFS可以用于寻找最短路径，但是空间复杂度比DFS高
 二叉树的情况下，DFS最坏是遍历到最深一层也就是O(logN)，但BDS遍历到最深一层是O(N/2)==O(N)  
 ### 寻找最短路径 模板
 ```python
-# 计算从起点 start 到终点 target 的最近距离
-def BFS(Node start, Node target):
-    if root == None:
-        # edge case
-         
-    nodeQueue = []
-    visited = set()
-    visited.add(root)
-    depth = 1
+from collections import deque
 
-    while len(nodeQueue)>0:
-        queueLen = len(nodeQueue)
-        for i in range(queueLen):            
-            tempNode = nodeQueue.pop(0)
-            if tempNode is target:
+def BFS(start, target):
+    if start is None:
+        return -1
+
+    queue = deque([start])
+    visited = {start}
+    depth = 0
+
+    while queue:
+        queueLen = len(queue)
+
+        for _ in range(queueLen):
+            node = queue.popleft()
+
+            if node == target:
                 return depth
-            for adjNode in tempNode.adj():
-                if adjNode not in visited:
-                    nodeQueue.append(adjNode)
-                    visited.add(adjNode)
-        depth+=1
-    
-    # target not found
-    error()
+
+            for neighbor in node.adj():
+                if neighbor not in visited:
+                    queue.append(neighbor)
+                    visited.add(neighbor)
+
+        depth += 1
+
+    return -1
+
+def BFS(start, target):
+    if start is None:
+        return -1
+
+    visited = {start}
+
+    def search(queue, depth):
+        if not queue:
+            return -1
+
+        next_queue = []
+
+        for node in queue:
+            if node == target:
+                return depth
+
+            for neighbor in node.adj():
+                if neighbor not in visited:
+                    visited.add(neighbor)
+                    next_queue.append(neighbor)
+
+        return search(next_queue, depth + 1)
+
+    return search([start], 0)
 ```
 参考：https://github.com/labuladong/fucking-algorithm/blob/master/%E7%AE%97%E6%B3%95%E6%80%9D%E7%BB%B4%E7%B3%BB%E5%88%97/BFS%E6%A1%86%E6%9E%B6.md
 ### 为什么BFS&DFS时间复杂度是O(E+V)？
