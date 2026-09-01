@@ -161,6 +161,14 @@ def bfs(visited, graph, node): #function for BFS
         visited.append(neighbour)
         queue.append(neighbour)
 ```
+
+如果是树的话，因为`E = V - 1`，所以
+```
+O(V + E)
+= O(V + V - 1)
+= O(V)
+```
+
 总时间复杂度  
 = O(V+V*e(v))  
 = O(V+E)  
