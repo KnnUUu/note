@@ -55,20 +55,37 @@ https://leetcode-cn.com/problems/binary-search/solution/er-fen-cha-zhao-de-xun-h
 ```python
 # 查找左侧边界
 def leftBound(nums, target):
-    l = 0, r = len(nums)-1
-    while l<=r:
-        mid = l+(r-l)//2 # 如果两个int都很大相加则可能溢出所以使用这种写法
+    l, r = 0, len(nums) - 1
+
+    while l <= r:
+        mid = l + (r - l) // 2 # 如果两个int都很大相加则可能溢出所以使用这种写法
+
         if nums[mid] >= target:
             r = mid - 1
-        else: #nums[mid] < target
+        else:
             l = mid + 1
-    
-    if l<0 or l>=len(nums) or nums[l]!=target:
-        # target not found
+
+    if l >= len(nums) or nums[l] != target:
         return -1
-    else:
-        # 循环中止条件是r+1==l，此时l指向左边边界
-        return nums[l]
+
+    # 循环中止条件是r+1==l，此时l指向左边边界
+    return l
+
+def rightBound(nums, target):
+    l, r = 0, len(nums) - 1
+
+    while l <= r:
+        mid = l + (r - l) // 2
+
+        if nums[mid] <= target:
+            l = mid + 1
+        else:
+            r = mid - 1
+
+    if r < 0 or nums[r] != target:
+        return -1
+
+    return r
 ```
 
 ## BFS&DFS  
